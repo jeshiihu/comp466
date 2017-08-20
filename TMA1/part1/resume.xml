@@ -2,4 +2,37 @@
 
 <!-- Resume structured with XML -->
 <resume>
+	<header>
+		<name>Jessica Huynh</name>
+		<address>
+			<addr1>10, 8115 144 Ave NW</addr1>
+			<city>Edmonton</city>
+			<province>Alberta</province>
+			<country>Canada</country>
+			<postalcode>T5C 2S4</postalcode>
+		</address>
+		<contact>
+			<phone>5877780796</phone>
+			<email>jhuynh@ualberta.ca</email>
+		</contact>
+	</header>
+	<body>
+		<section type = "Academic Education">
+			<institution>University of Alberta</institution>
+			<program>Computer Co-op Engineering</program>
+			<degree>BSc</degree>
+			<gradyear>2018</gradyear>
+		</section>
+		<section type = "Computer Experience">
+			<bullet>Programming Languages: C#, C++, Java, C, Python, and SQL</bullet>
+			<bullet>Actively learning: HTML5 and CSS3</bullet>
+			<bullet>IDEs: Visual Studios, Android Studio, and Eclipse</bullet>
+			<bullet>Control Systems: Perforce, Team Foundation Server, GitHub</bullet>
+			<bullet>SQL: SQL Server, SQLite3, Toad for SQL, FlameRobin</bullet>
+			<bullet>Unit Testing: JUnit, CppUnitTestFramework</bullet>
+			<bullet>Able to use Macintosh, PC, and Linuc operating systems</bullet>
+			<bullet>Proficient in Adobe Photoschop CS5 and CS6</bullet>
+			<bullet>Capable of using MatLab, Oracle VirtualBoc, Xilinx ISE Design Suite, and Cadence Desgin Systems
+		</section>
+	</body>
 </resume>
