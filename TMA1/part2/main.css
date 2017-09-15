@@ -1,0 +1,20 @@
+html, body {
+	font-family: "Lato", serif;
+	color: #FFFFFF;
+}
+
+/* http://materializecss.com/color.html */
+.banner {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: #B2DFDB;
+	width: 100%;
+}
+
+/* NOT SURE BUT THIS IS NOT WORKING */
+.banner.content {
+	text-align: right;
+	vertical-align: middle;
+	width: 100%;
+}
