@@ -18,26 +18,30 @@
 	</header>
 
 	<body>
-		<section type = "Academic Education">
+		<section>
+			<title>Academic Education</title>
 			<institution>University of Alberta</institution>
 			<program>Computer Co-op Engineering</program>
 			<degree>BSc</degree>
 			<gradyear>2018</gradyear>
 		</section>
-		<section type = "Computer Experience">
+		<section>
+			<title>Computer Experience</title>
 			<bullet>Programming Languages: C#, C++, Java, C, Python, and SQL</bullet>
 			<bullet>Actively learning: HTML5 and CSS3</bullet>
 			<bullet>IDEs: Visual Studios, Android Studio, and Eclipse</bullet>
 			<bullet>Control Systems: Perforce, Team Foundation Server, GitHub</bullet>
 			<bullet>SQL: SQL Server, SQLite3, Toad for SQL, FlameRobin</bullet>
 			<bullet>Unit Testing: JUnit, CppUnitTestFramework</bullet>
-			<bullet>Able to use Macintosh, PC, and Linuc operating systems</bullet>
+			<bullet>Able to use Macintosh, PC, and Linux operating systems</bullet>
 			<bullet>Proficient in Adobe Photoschop CS5 and CS6</bullet>
 			<bullet>Capable of using MatLab, Oracle VirtualBoc, Xilinx ISE Design Suite, and Cadence Desgin Systems</bullet>
 		</section>
 
-		<section type = "Work Experience">
-			<employer type = "Kardium Inc.">
+		<section>
+			<title>Work Experience</title>
+			<employer>
+				<company>Kardium Inc.</company>
 				<addr>Burnaby, BC</addr>
 				<role>QA Internal Tools Developer Intern</role>
 				<timeframe>May 2017 - Current</timeframe>
@@ -49,7 +53,8 @@
 					<bullet>Record process of individual work on FogBugz</bullet>
 				</responsibilities>
 			</employer>
-			<employer type = "SUBNET Solutions Inc.">
+			<employer>
+				<company>SUBNET Solutions Inc.</company>
 				<addr>Edmonton, AB</addr>
 				<role>User Interface Software Intern</role>
 				<timeframe>January 2016 - August 2016</timeframe>
@@ -61,7 +66,8 @@
 					<bullet>Organization skills with Team Foundation Server to keep track of tasks for a sprint as well as daily, bi-weekly, and monthly Scrum meetings</bullet>
 				</responsibilities>
 			</employer>
-			<employer type = "Alberta Computers for Schools">
+			<employer>
+				<company>Alberta Computers for Schools</company>
 				<addr>Edmonton, AB</addr>
 				<role>Computer Repair Technician</role>
 				<timeframe>May 2015 - August 2015</timeframe>
@@ -74,39 +80,46 @@
 				</responsibilities>
 			</employer>
 		</section>
-		<section type = "Additional Information">
-			<section type = "Programming Achievements">
-				<project type = "Further Developed Existing Tools from Beta to Release">
+		<section>
+			<title>Additional Information</title>
+			<subSection>
+				<title>Programming Achievements</title>
+				<project>
+					<name>Further Developed Existing Tools from Beta to Release</name>
 					<company>Kardium Inc.</company>
 					<datetime>Summer 2017</datetime>
 					<acknowledgements>Kevin Riebs, Tudor Costin</acknowledgements>
-					<notes>Individually developed various tools that underwent formal testing and release</notes>
+					<note>Individually developed various tools that underwent formal testing and release</note>
 					<duration>4 months</duration>
 				</project>
-				<project type = "Creation of Transportation Andriod Application">
+				<project>
+					<name>Creation of Transportation Andriod Application</name>
 					<company>University of Alberta</company>
 					<datetime>Fall 2016</datetime>
 					<acknowledgements>Dr. Abram Hindle</acknowledgements>
-					<notes>Worked in a team of 5 to design and release a fully MVC application</notes>
+					<note>Worked in a team of 5 to design and release a fully MVC application</note>
 					<duration>3 months</duration>
 				</project>
-				<project type = "Creation of Task Tracker Andriod Application">
+				<project>
+					<name>Creation of Task Tracker Andriod Application</name>
 					<company>University of Alberta</company>
 					<datetime>Fall 2016</datetime>
 					<acknowledgements>Dr. Abram Hindle</acknowledgements>
-					<notes>Individually produced an app to help organized tasks and view past history</notes>
+					<note>Individually produced an app to help organized tasks and view past history</note>
 					<duration>1 month</duration>
 				</project>
-			</section>
-			<section type = "Hobbies">
+			</subSection>
+			<subSection>
+				<title>Hobbies</title>
 				<bullet>Designing album art and digital designs using Photoshop</bullet>
 				<bullet>Creating paintings, sketches, and multimedia art pieces</bullet>
-			</section>
-			<section type = "Other">
+			</subSection>
+			<subSection>
+				<title>Other</title>
 				<bullet>Class 5 GDL with clean abstract</bullet>
 				<bullet>Fluent in English and able to converse in Vietnamese</bullet>
 				<bullet>Alberta Construction Engineering Safety Course Certificate, 2013</bullet>
-			</section>
+			</subSection>
 		</section>
 	</body>
 </resume>
