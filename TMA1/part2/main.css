@@ -1,6 +1,5 @@
 html, body {
 	font-family: "Lato", serif;
-	color: #FFFFFF;
 }
 
 /* http://materializecss.com/color.html */
@@ -14,7 +13,34 @@ html, body {
 
 /* NOT SURE BUT THIS IS NOT WORKING */
 .banner.content {
-	text-align: right;
+	color: #FFFFFF;
+	position: absolute;
+	text-indent: 10em;
 	vertical-align: middle;
 	width: 100%;
+}
+
+i {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    margin-left: 0.5em;
+    display: inline-block;
+    padding: 3px;
+}
+
+.down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+/* WELCOME PAGE */
+h1.welcome {
+	margin-top: 5em;
+	text-align: center;
+	color: #000000;
+}
+
+p.welcome {
+	text-align: center;
+	color: #4C4C4C;
 }
