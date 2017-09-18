@@ -25,22 +25,40 @@ p.welcome {
 	color: #4C4C4C;
 }
 
-.navigation {
-	color: white;
+.navigators {
+   position: relative;
+   align-items: center;
 }
 
-.btn {
-   border: 0;
-   background-color: #B2DFDB;
-   height:75px;
-   width:75px;
-   cursor:pointer;
-   text-align: center;
+.navigators .btn {
+  border: 0;
+  display: inline block;
+  margin-right: 1em;
+  background-color: #B2DFDB;
+  height:200px;
+  width:200px;
+  cursor:pointer;
+  text-align: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center bottom;
 }
 
-.btn:hover {
-   background-color: blue;
+.navigators .btn:hover {
+   background-color: #3E8A91;
    color: white;
+}
+
+#unit1 {
+   background-image: url(html5.png);
+}
+
+#unit2 {
+   background-image: url(css.png);
+}
+
+#unit3 {
+   background-image: url(xml.png);
 }
 
 i {
