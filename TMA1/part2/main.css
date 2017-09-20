@@ -39,14 +39,23 @@ html, body {
   background: white;
 }
 
-/* WELCOME PAGE */
-h1.welcome {
+.initial .title,
+.initial .subTitle {
+   display: inline-block;
+}
+
+h1.title {
 	margin-top: 3em;
 	text-align: center;
 	color: #000000;
 }
 
-p.welcome {
+h1.subTitle {
+   text-align: center;
+   color: #B2DFDB;
+}
+
+p.blurb {
 	text-align: center;
 	color: #4C4C4C;
 }
