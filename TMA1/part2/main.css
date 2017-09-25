@@ -41,16 +41,16 @@ html, body {
 
 .initial .title,
 .initial .subTitle {
-   display: inline-block;
+  display: inline-block;
 }
 
-h1.title {
+.initial h1.title {
 	margin-top: 3em;
 	text-align: center;
 	color: #000000;
 }
 
-h1.subTitle {
+.initial h1.subTitle {
    text-align: center;
    color: #B2DFDB;
 }
@@ -107,4 +107,8 @@ i {
 .arrowDown {
     transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
+}
+
+.tutorial p{
+    color: #4C4C4C;
 }
