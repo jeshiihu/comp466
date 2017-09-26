@@ -39,19 +39,23 @@ html, body {
   background: white;
 }
 
-.initial .title,
-.initial .subTitle {
-  display: inline-block;
+.initial {
+  text-align: center;
 }
 
-.initial h1.title {
+h1 {
+  display: inline-block;
+  margin: 0 auto;
+}
+
+.initial #title {
 	margin-top: 3em;
 	text-align: center;
 	color: #000000;
 }
 
-.initial h1.subTitle {
-   text-align: center;
+.initial #subTitle {
+   text-align: left;
    color: #B2DFDB;
 }
 
@@ -61,22 +65,29 @@ p.blurb {
 }
 
 .navigators {
-   position: relative;
-   align-content: center;
+  text-align: center;
+}
+
+.navigators form {
+  display: inline;
+}
+
+.navigators h4 {
+  font-size: 2em;
+  text-align: center;
+  margin-top: -1.5em;
 }
 
 .navigators .btn {
   border: 0;
-  display: inline block;
   margin-right: 1em;
   background-color: #B2DFDB;
   height:150px;
   width:150px;
-  cursor:pointer;
-  text-align: center;
+  cursor: pointer;
   background-size: inherit;
   background-repeat: no-repeat;
-  background-position: center bottom;
+  background-position: center 6em;
 }
 
 .navigators .btn:hover {
