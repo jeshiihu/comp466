@@ -56,7 +56,7 @@ h1 {
 
 .initial #subTitle {
    text-align: left;
-   color: #B2DFDB;
+   color: #7eb7bc;
 }
 
 p.blurb {
@@ -75,13 +75,13 @@ p.blurb {
 .navigators h4 {
   font-size: 2em;
   text-align: center;
-  margin-top: -1.5em;
 }
 
 .navigators .btn {
   border: 0;
+  border-radius: 1em;
   margin-right: 1em;
-  background-color: #B2DFDB;
+  background-color: #7eb7bc;
   height:150px;
   width:150px;
   cursor: pointer;
@@ -91,20 +91,8 @@ p.blurb {
 }
 
 .navigators .btn:hover {
-   background-color: #3E8A91;
+   background-color: #31767c;
    color: white;
-}
-
-#unit1 {
-   background-image: url(html5.png);
-}
-
-#unit2 {
-   background-image: url(css.png);
-}
-
-#unit3 {
-   background-image: url(xml.png);
 }
 
 i {
