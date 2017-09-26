@@ -1,25 +1,16 @@
-(function() {
-	var btn = document.getElementById('unit1Quiz');
-	var quizDialog = document.getElementById('quiz');
-	btn.addEventListener('click', 
-		function() {
-			quizDialog.showModal();
-		}
-	);
 
-	// wait for submit
-	var submit = document.getElementById('submit');
-	submit.addEventListener('click', 
-		function() {
-			quizDialog.close();
-		}
-	);
+var quizbtn = document.getElementById('quizbtn');
+var quizDialog = document.getElementById('quiz');
+quizbtn.onclick = function() {
+	quizDialog.style.display = 'block';
+}
 
-	// wait for submit
-	var cancel = document.getElementById('cancel');
-	cancel.addEventListener('click', 
-		function() {
-			quizDialog.close();
-		}
-	);
-})();
+var submit = document.getElementById('submit')
+submit.onclick = function() {
+	quizDialog.style.display = 'none';
+}
+
+var cancel = document.getElementById('cancel');
+cancel.onclick = function() { 
+	quizDialog.style.display = 'none';
+}
