@@ -1,6 +1,7 @@
 
+var quizbtn = document.getElementById('quizbtn');
 var quizDialog = document.getElementById('quiz');
-quizDialog.on = function() {
+quizbtn.onclick = function() {
 	quizDialog.style.display = 'block';
 }
 
