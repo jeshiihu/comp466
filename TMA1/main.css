@@ -127,7 +127,6 @@ i {
   width: 50%;
   height: 50%;
   overflow: auto; /*scroll bar*/
-  text-align: center;
   
   /* colouring */
   background-color: white;
@@ -135,3 +134,4 @@ i {
   border: solid black;
   border-width: 0 3px 3px 0;
 }
+
