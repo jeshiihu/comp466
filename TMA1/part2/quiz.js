@@ -1,9 +1,4 @@
-
-var quizbtn = document.getElementById('quizbtn');
-var quizDialog = document.getElementById('quiz');
-quizbtn.onclick = function() {
-	quizDialog.style.display = 'block';
-}
+var quizDialog = document.getElementById('quizObj');
 
 var submit = document.getElementById('submit')
 submit.onclick = function() {
