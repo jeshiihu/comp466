@@ -1,13 +1,29 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Measurement Converter</title>
-	<link rel="stylesheet" type="text/css" href="../main.css">
-	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato:900">
-</head>
-<body>
-	<dialog id="dlg">
-		<button id="cancel">Close</button>
-	</dialog>
-</body>
-</html>
+
+<link rel="stylesheet" type="text/css" href="../main.css">
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato:900">
+<script src="calculations.js" type="text/javascript"></script>
+
+<h2>Weight</h2>
+<p>
+	Input:
+	<input id="input" type="text" list="weightA" onkeydown="return false;" onclick="this.onchange()" onchange="ConvertMeasurement()"/>
+
+	---> Output:
+	<input id="output" type="text" list="weightA" onkeydown="return false;"  onclick="this.onchange()" onchange="ConvertMeasurement()" />
+	<datalist id="weightA">
+		<option value="Kilograms (kg)">
+		<option value="Grams (g)">
+		<option value="Pounds (lbs)">
+		<option value="Ounces (oz)">
+		<option value="Stone (st)">
+		<option value="Tonne (ft)">
+	</datalist>
+</p><br/>
+<p>
+	Value:
+	<input id="userVal" type="text" onkeyup="CalculateOnKeyPress(event, this)"/>
+</p>
+<p>
+	Result:
+	<input id="res" type="text" readonly="readonly" disabled="true" />
+</p>

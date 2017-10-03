@@ -1,5 +1,5 @@
 var quizbtn = document.getElementById('quizbtn');
-var quizDialog = document.getElementById('dlg');
+var quizDialog = document.getElementsByClassName('dlg')[0];
 var tutorial = document.getElementById('tutorial');
 quizbtn.onclick = function() {
 	quizDialog.style.display = 'block';
