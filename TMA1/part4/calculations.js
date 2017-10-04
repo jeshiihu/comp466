@@ -1,12 +1,4 @@
 
-// https://stackoverflow.com/questions/469357/html-text-input-allows-only-numeric-input
-// $("dlg").
-// 	var inputs = document.getElementsByTagName('input')
-// 	for (var i = 0; i < inputs.length ; i++) {
-// 		inputs[i].reset();
-// 	};
-// }
-
 
 function NumericDecimalOnly(input, obj)
 {
@@ -24,28 +16,136 @@ function NumericDecimalOnly(input, obj)
 	}
 }
 
-function CalculateOnKeyPress(input, obj)
+function ConvertMeasurement(obj)
 {
-	NumericDecimalOnly(input, obj);
-	ConvertMeasurement();
+	var originalIdTag = obj.getAttribute("id")
+	var textBoxes = document.getElementsByTagName("input");
+	for (var i = 0; i < textBoxes.length; i++) 
+	{
+		var currIdTag = textBoxes[i].getAttribute("id");
+		textBoxes[i].value = MeasurementCalculation(obj.value, originalIdTag, currIdTag);
+	}
 }
 
-function ConvertMeasurement()
+function MeasurementCalculation(val, origId, currId)
 {
-	var input = document.getElementById('input').value;
-	var output = document.getElementById('output').value;
-	var value = document.getElementById('userVal').value;
+	if(origId == "kg")
+	{
+		switch (currId) {
+			case "kg":
+				return val;
+			case "g":
+				return parseFloat(val)*1000;
+			case "lbs":
+				return parseFloat(val)*2.20462;
+			case "oz":
+				return parseFloat(val)*35.274;
+			case "st":
+				return parseFloat(val)*0.157473;
+			case "tn":
+				return parseFloat(val)*0.00110231;
+			default:
+				return val + "(could not convert)";
+		}
+	}
+	
+	if(origId == "g")
+	{
+		switch (currId) {
+			case "kg":
+				return parseFloat(val)*0.001;
+			case "g":
+				return val;
+			case "lbs":
+				return parseFloat(val)*0.00220462;
+			case "oz":
+				return parseFloat(val)*0.035274;
+			case "st":
+				return parseFloat(val)*0.000157473;
+			case "tn":
+				return parseFloat(val)*0.00000110231;
+			default:
+				return val + "(could not convert)";
+		}
+	}
+	
+	if(origId == "lbs")
+	{
+		switch (currId) {
+			case "kg":
+				return parseFloat(val)*0.453592;
+			case "g":
+				return parseFloat(val)*453.592;
+			case "lbs":
+				return val;
+			case "oz":
+				return parseFloat(val)*16;
+			case "st":
+				return parseFloat(val)*0.0714286;
+			case "tn":
+				return parseFloat(val)*0.0005;
+			default:
+				return val + "(could not convert)";
+		}
+	}
+	
+	if(origId == "oz")
+	{
+		switch (currId) {
+			case "kg":
+				return parseFloat(val)*0.0283495;
+			case "g":
+				return parseFloat(val)*28.3495;
+			case "lbs":
+				return parseFloat(val);
+			case "oz":
+				return val;
+			case "st":
+				return parseFloat(val)*0.00446429;
+			case "tn":
+				return parseFloat(val)*0.00003125;
+			default:
+				return val + "(could not convert)";
+		}
+	}
 
-	var regexDec = /^\.$/; //exactly
-	var invalidVal = value.length == 0 || regexDec.test(value);
-	if(input.length == 0 || output.length == 0 || invalidVal)
-		return;
+	if(origId == "st")
+	{
+		switch (currId) {
+			case "kg":
+				return parseFloat(val)*6.35029;
+			case "g":
+				return parseFloat(val)*6350.29;
+			case "lbs":
+				return parseFloat(val)*14;
+			case "oz":
+				return parseFloat(val)*224;
+			case "st":
+				return val;
+			case "tn":
+				return parseFloat(val)*0.007;
+			default:
+				return val + "(could not convert)";
+		}
+	}
 
-	var tbxResult = document.getElementById('res');
-	tbxResult.value = MeasurementCalculation(input, output, value);
-}
-
-function MeasurementCalculation(input, output, value)
-{
-	return value;
+	if(origId == "tn")
+	{
+		switch (currId) {
+			case "kg":
+				return parseFloat(val)*907.185;
+			case "g":
+				return parseFloat(val)*907185;
+			case "lbs":
+				return parseFloat(val)*2000;
+			case "oz":
+				return parseFloat(val)*32000;
+			case "st":
+				return parseFloat(val)*142.857;
+			case "tn":
+				return val;
+			default:
+				return val + "(could not convert)";
+		}
+	}
 }

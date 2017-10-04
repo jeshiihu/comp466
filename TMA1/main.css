@@ -133,7 +133,7 @@ i {
   /* colouring */
   background-color: white;
   box-shadow: 0px 3px 20px #888888;
-  border-width: 0 3px 3px 0;
+  border-width: 0;
   padding: 1.5em;
   padding-bottom: 3em;
 
@@ -144,5 +144,21 @@ i {
   width: 100%;
   height: 100%;
   overflow: hidden;
+}
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/* split left and right ///////////////////////////////////////////////////////////////////////////////////////////////////*/
+.left {
+  float: left;
+  width: 50%
+}
+
+.right {
+  margin-left: 50%;
+}
+
+input {
+  float: right;
+  margin-right: 6em;
 }
 
