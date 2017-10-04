@@ -58,7 +58,7 @@ h1 {
 	color: #000000;
 }
 
-.initial #subTitle {
+.initial #subTitle, h2 {
    text-align: left;
    color: #7eb7bc;
 }
@@ -66,6 +66,10 @@ h1 {
 p.blurb {
 	text-align: center;
 	color: #4C4C4C;
+}
+
+.tabbed {
+  margin-left: 1em;
 }
 
 /* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
