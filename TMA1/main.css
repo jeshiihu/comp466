@@ -75,7 +75,8 @@ p.blurb {
 }
 
 .navigators form {
-  display: inline;
+  display: inline-block;
+  vertical-align: top;
 }
 
 .navigators h4 {
@@ -91,9 +92,9 @@ p.blurb {
   height:150px;
   width:150px;
   cursor: pointer;
-  background-size: inherit;
-  background-repeat: no-repeat;
-  background-position: center 6em;
+  /*background-size: inherit;*/
+  /*background-repeat: no-repeat;*/
+  /*background-position: center;*/
 }
 
 .navigators .btn:hover {
@@ -112,8 +113,8 @@ i {
 #tutorial p{
   color: #4C4C4C;
 }
-
 /* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
 /* MODAL QUIZ /////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 /* https://www.w3schools.com/howto/howto_css_modals.asp */
 .dlg {
