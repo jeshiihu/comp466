@@ -36,6 +36,8 @@ function GetImage()
 	im.src = photos.img[index];
 	var photoIndex = document.getElementById("photoIndex");
 	photoIndex.textContent = "Photo " + (index+1);
+
+	var cbxEffect = document.getElementById("effect");
 }
 
 function DisplayImage(im)
