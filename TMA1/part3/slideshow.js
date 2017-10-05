@@ -22,11 +22,14 @@ var slideshow = document.getElementById('slideshow');
 var context = slideshow.getContext('2d');
 window.onload = function()
 {
-	var image = GetImage(0)
+	ModSize();
 }
 
 function GetImage()
 {
+    clearInterval(effectInterval);
+	context.clearRect(0,0, slideshow.width, slideshow.height);
+
 	var im = new Image();
 	im.onload = function() {
     	DisplayImage(im)
@@ -41,18 +44,15 @@ function GetImage()
 var fps = 60;
 var cbxEffect = document.getElementById("effect");
 var alpha = 0.00;
+var effectInterval;
 function DisplayImage(im)
 {
-	context.fillRect(im, 0, 0, slideshow.width, slideshow.height);
-
-	var done = false;
-	for(var i = 0; i < 1000000; i++)
+	if(cbxEffect.value == "none")
+		ContextMod(im);
+	else if (cbxEffect.value == "fade")
 	{
-		setTimeout(function()
-		{
-			ContextMod(im);
-	 	}, 100);
-	 	// Sleep(10);
+		alpha = 0.00;
+		effectInterval = setInterval(function(){ ContextMod(im) }, 50);
 	}
 }
 
@@ -65,12 +65,16 @@ function ContextMod(im)
 	context.drawImage(im, 0, 0, slideshow.width, slideshow.height);
 
     context.fillStyle = 'rgba(58,58,58,0.5)';
-	context.fillRect(0,slideshow.height-50, slideshow.width,50);
+	context.fillRect(0,slideshow.height-50, slideshow.width, 100);
 
 	context.font = "15pt Lato";
 	context.fillStyle = "white";
 	context.textAlign = "center";
     context.fillText(photos.caption[index], slideshow.width/2, slideshow.height-20);
+
+    if(IsFinished())
+    	clearInterval(effectInterval);
+
 }
 
 function Sleep(ms)
@@ -96,6 +100,11 @@ function IsFinished()
 
 var cbxSize = document.getElementById("size");
 cbxSize.onchange = function()
+{
+	ModSize();
+}
+
+function ModSize()
 {
 	if(cbxSize.value == "l")
 	{
@@ -139,7 +148,7 @@ playBtn.onclick = function()
 	if(playBtn.getAttribute("src") == "Icons/play.png")
 	{
 		playBtn.setAttribute("src", "Icons/stop.png");
-		interval = setInterval(function(){ DisplayImageTimed() }, 2000);
+		interval = setInterval(function(){ DisplayImageTimed() }, GetTimePlay());
 	}
 	else
 	{
@@ -147,6 +156,14 @@ playBtn.onclick = function()
 		clearInterval(interval)
 		shuffledList = new Array();
 	}
+}
+
+function GetTimePlay()
+{
+	if(cbxEffect.value == "none")
+		return 2000;
+	else
+		return 5000;
 }
 
 function DisplayImageTimed()
