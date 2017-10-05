@@ -60,7 +60,6 @@ function GetTipCalc()
 	}
 }
 
-
 tipType.onchange = function()
 {
 	if(tipType.value == "percent")
