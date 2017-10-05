@@ -84,7 +84,6 @@ em {
 
 .navigators form {
   display: inline-block;
-  vertical-align: top;
 }
 
 .navigators h4 {
@@ -93,6 +92,7 @@ em {
 }
 
 .navigators .btn {
+  vertical-align: top;
   border: 0;
   border-radius: 1em;
   margin-right: 1em;

@@ -7,9 +7,9 @@
 				<meta charset="utf-8"/>
 				<link rel ="stylesheet" type="text/css" href="../main.css"/>
 				<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato:900"/>
-
 				<title>COMP466: Assignment 1 Part 1</title>
-
+			</head>
+			<body>
 				<div id="page" class="banner">
 					<div class="content">
 						<ul>
@@ -18,8 +18,7 @@
 						</ul>
 					</div>
 				</div>
-			</head>
-			<body>
+
 				<div class="initial">
 					<h1 id="title">Resume | </h1>
 					<h1 id="subTitle"><xsl:value-of select="resume/header/name"/></h1>
