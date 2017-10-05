@@ -25,23 +25,42 @@ window.onload = function()
 	var image = GetImage(0)
 }
 
-// var im = new Image();
 function GetImage()
 {
 	var im = new Image();
 	im.onload = function() {
-    	DisplayImage(im);
+    	DisplayImage(im)
     };
 	im.src = photos.img[index];
 	var photoIndex = document.getElementById("photoIndex");
 	var photoNum = index + 1;
 	photoIndex.textContent = "Photo " + photoNum;
 
-	var cbxEffect = document.getElementById("effect");
 }
 
+var fps = 60;
+var cbxEffect = document.getElementById("effect");
+var alpha = 0.00;
 function DisplayImage(im)
 {
+	context.fillRect(im, 0, 0, slideshow.width, slideshow.height);
+
+	var done = false;
+	for(var i = 0; i < 1000000; i++)
+	{
+		setTimeout(function()
+		{
+			ContextMod(im);
+	 	}, 100);
+	 	// Sleep(10);
+	}
+}
+
+function ContextMod(im)
+{
+	alpha = (cbxEffect.value == "fade") ? alpha + 0.01 : 1;
+
+	context.globalAlpha = alpha;
 	context.imageSmoothingEnabled = true;
 	context.drawImage(im, 0, 0, slideshow.width, slideshow.height);
 
@@ -52,6 +71,27 @@ function DisplayImage(im)
 	context.fillStyle = "white";
 	context.textAlign = "center";
     context.fillText(photos.caption[index], slideshow.width/2, slideshow.height-20);
+}
+
+function Sleep(ms)
+{
+	var currTime = new Date().getTime();
+	while((currTime + ms) >= new Date().getTime());
+}
+
+function IsFinished()
+{
+	if(cbxEffect.value == "none")
+		return true;
+
+	if(cbxEffect.value == "fade");
+	{
+		if(alpha > 1.00)
+		{
+			alpha = 0.00;
+			return true;
+		}
+	}
 }
 
 var cbxSize = document.getElementById("size");
@@ -105,7 +145,7 @@ playBtn.onclick = function()
 	{
 		playBtn.setAttribute("src", "Icons/play.png");
 		clearInterval(interval)
-		shuffledList = new new Array();
+		shuffledList = new Array();
 	}
 }
 
