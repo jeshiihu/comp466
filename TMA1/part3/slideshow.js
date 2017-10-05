@@ -41,9 +41,9 @@ function GetImage()
 
 }
 
-var fps = 60;
 var cbxEffect = document.getElementById("effect");
 var alpha = 0.00;
+var slideIncr = 0;
 var effectInterval;
 function DisplayImage(im)
 {
@@ -52,17 +52,35 @@ function DisplayImage(im)
 	else if (cbxEffect.value == "fade")
 	{
 		alpha = 0.00;
-		effectInterval = setInterval(function(){ ContextMod(im) }, 50);
+		var fps = 60;
+		effectInterval = setInterval(function(){ ContextMod(im) }, fps);
+	}
+	else //slide
+	{
+		var fps = 30;
+		effectInterval = setInterval(function(){ ContextMod(im) }, fps);
 	}
 }
 
+var imgX = slideshow.width;
 function ContextMod(im)
 {
 	alpha = (cbxEffect.value == "fade") ? alpha + 0.01 : 1;
 
 	context.globalAlpha = alpha;
 	context.imageSmoothingEnabled = true;
-	context.drawImage(im, 0, 0, slideshow.width, slideshow.height);
+
+	if(cbxEffect.value == "slide")
+	{
+		var fps = 30;
+		var diff = slideshow.width - (slideshow.width/fps*slideIncr);
+		slideIncr++;
+		imgX = diff;
+	}
+	else
+		imgX = 0;
+
+	context.drawImage(im, imgX, 0, slideshow.width, slideshow.height);
 
     context.fillStyle = 'rgba(58,58,58,0.5)';
 	context.fillRect(0,slideshow.height-50, slideshow.width, 100);
@@ -93,6 +111,15 @@ function IsFinished()
 		if(alpha > 1.00)
 		{
 			alpha = 0.00;
+			return true;
+		}
+	}
+
+	if(cbxEffect.value == "slide")
+	{
+		if(imgX <= 0)
+		{
+			slideIncr = 0;
 			return true;
 		}
 	}
@@ -162,8 +189,10 @@ function GetTimePlay()
 {
 	if(cbxEffect.value == "none")
 		return 2000;
-	else
+	else if(cbxEffect.value == "fade")
 		return 5000;
+	else
+		return 3500;
 }
 
 function DisplayImageTimed()
