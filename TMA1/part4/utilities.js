@@ -4,7 +4,18 @@ measurementBtn.onclick = function() {
 	measurementDlg.style.display = 'block';
 }
 
-var closeBtn = document.getElementById('cancel')
-closeBtn.onclick = function() {
+var tipBtn = document.getElementById('tip');
+var tipDlg = document.getElementsByClassName('dlg')[2];
+tipBtn.onclick = function() {
+	tipDlg.style.display = 'block';
+}
+
+var closeMeasureBtn = document.getElementById('cancelMeasurement')
+closeMeasureBtn.onclick = function() {
 	measurementDlg.style.display = 'none';
+}
+
+var closeTipBtn = document.getElementById('cancelTip')
+closeTipBtn.onclick = function() {
+	tipDlg.style.display = 'none';
 }

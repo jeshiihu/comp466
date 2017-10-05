@@ -72,6 +72,10 @@ p.blurb {
   margin-left: 1em;
 }
 
+em {
+   color: #4C4C4C;
+}
+
 /* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 /* CUSTOM BUTTON NAVIGATION ///////////////////////////////////////////////////////////////////////////////////////////////*/
 .navigators {
@@ -96,9 +100,6 @@ p.blurb {
   height:150px;
   width:150px;
   cursor: pointer;
-  /*background-size: inherit;*/
-  /*background-repeat: no-repeat;*/
-  /*background-position: center;*/
 }
 
 .navigators .btn:hover {
