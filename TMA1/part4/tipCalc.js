@@ -36,11 +36,11 @@ function ShowSideCalc()
 	var tip= document.getElementById("totTip");
 	var total = document.getElementById("total");
 
-	orig.textContent = origAmt.value;
-	tip.textContent = GetTipCalc();
+	orig.textContent = parseFloat(origAmt.value).toFixed(2);
+	tip.textContent = parseFloat(GetTipCalc()).toFixed(2);
 	if(orig.textContent == "" || tip.textContent == "") return;
 
-	total.textContent = parseFloat(orig.textContent) + parseFloat(tip.textContent);
+	total.textContent = (parseFloat(orig.textContent) + parseFloat(tip.textContent)).toFixed(2);
 }
 
 var tipType = document.getElementById("tipType");

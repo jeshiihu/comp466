@@ -1,42 +1,47 @@
-
-<link rel="stylesheet" type="text/css" href="../main.css">
-<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato:900">
-<script src="measureCalc.js" type="text/javascript"></script>
-
-<div class="initial">
-	<h1 id="subTitle">Weight Measurement Converter</h1>
-	
-</div>
-<div class="left">
-		Kilograms (kg)
-		<input id="kg" type="text" onkeypress="NumericDecimalOnly(event, this)" onkeyup="ConvertMeasurement(this)"
-		onfocus="this.select();"/>
-	<p>
-		Grams (g)
-		<input id="g" type="text" onkeypress="NumericDecimalOnly(event, this)" onkeyup="ConvertMeasurement(this)"
-		onfocus="this.select();"/>
-	</p>
-	<p>
-		Pounds (lbs)
-		<input id="lbs" type="text" onkeypress="NumericDecimalOnly(event, this)" onkeyup="ConvertMeasurement(this)"
-		onfocus="this.select();"/>
-	</p>
-</div>
-<div class="right">
-	<p>
-		Ounces (oz)
-		<input id="oz" type="text" onkeypress="NumericDecimalOnly(event, this)" onkeyup="ConvertMeasurement(this)"
-		onfocus="this.select();"/>
-	</p>
-	<p>
-		Stone (st)
-		<input id="st" type="text" onkeypress="NumericDecimalOnly(event, this)" onkeyup="ConvertMeasurement(this)"
-		onfocus="this.select();"/>
-	</p>
-	<p>
-		US Tonne (tn)
-		<input id="tn" type="text" onkeypress="NumericDecimalOnly(event, this)" onkeyup="ConvertMeasurement(this)"
-		onfocus="this.select();"/>
-	</p>
-</div>
-</table>
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Measurement Converter</title>
+		<link rel="stylesheet" type="text/css" href="../main.css">
+		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato:900">
+		<script src="measureCalc.js" type="text/javascript"></script>
+	</head>
+	<body>
+		<div class="initial">
+			<h1 id="subTitle">Weight Measurement Converter</h1>
+			<p class="blurb">Type into any of the field below and the conversion will be updated live.</p>
+		</div>
+		<div class="left">
+				Kilograms (kg)
+				<input id="kg" type="text" onkeypress="NumericDecimalOnly(event, this)" onkeyup="ConvertMeasurement(this)"
+				onfocus="this.select();"/>
+			<p>
+				Grams (g)
+				<input id="g" type="text" onkeypress="NumericDecimalOnly(event, this)" onkeyup="ConvertMeasurement(this)"
+				onfocus="this.select();"/>
+			</p>
+			<p>
+				Pounds (lbs)
+				<input id="lbs" type="text" onkeypress="NumericDecimalOnly(event, this)" onkeyup="ConvertMeasurement(this)"
+				onfocus="this.select();"/>
+			</p>
+		</div>
+		<div class="right">
+			<p>
+				Ounces (oz)
+				<input id="oz" type="text" onkeypress="NumericDecimalOnly(event, this)" onkeyup="ConvertMeasurement(this)"
+				onfocus="this.select();"/>
+			</p>
+			<p>
+				Stone (st)
+				<input id="st" type="text" onkeypress="NumericDecimalOnly(event, this)" onkeyup="ConvertMeasurement(this)"
+				onfocus="this.select();"/>
+			</p>
+			<p>
+				US Tonne (tn)
+				<input id="tn" type="text" onkeypress="NumericDecimalOnly(event, this)" onkeyup="ConvertMeasurement(this)"
+				onfocus="this.select();"/>
+			</p>
+		</div>
+	</body>
+</html>
