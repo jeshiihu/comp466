@@ -1,39 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Tip Calulator</title>
+		<link rel="stylesheet" type="text/css" href="../main.css">
+		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato:900">
+	</head>
+	<body>
+		<div class="initial">
+			<h1 id="subTitle">Tip Calculator</h1><br/>
+			<p class="blurb">Please enter the amount of your bill and select the tip amount</p>
+			Tip Type:
+			<select id="tipType" value="percent">
+				<option value="percent">Percentage</option>
+				<option value="dollar">Dollar Amount</option>
+			</select><br/><br/>
+		</div>
+		<div class="left">
+			<p>
+				Bill: 
+				<input id="amt" type="text" onkeypress="NumericDecimalOnly(event, this)"
+					   onkeyup="CalcTotal(this)" onfocus="this.select();"/>
+			</p>
+			<p>
+				Tip Percent:
+				<input id="tipPercentage" type="text" onkeypress="NumericDecimalOnly(event, this)"
+					   onkeyup="CalcTotal(this)" onfocus="this.select();"/>
+			</p>
+			<p>
+				Tip Amount:
+				<input id="tipAmt" type="text" disabled="true" onkeypress="NumericDecimalOnly(event, this)"
+				   	   onkeyup="CalcTotal(this)" onfocus="this.select();"/>
+			</p>
+		</div>
 
-<link rel="stylesheet" type="text/css" href="../main.css">
-<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato:900">
-
-<div class="initial">
-	<h1 id="subTitle">Tip Calculator</h1><br/>
-	<p class="blurb">Please enter the amount of your bill and select the tip amount</p>
-	Tip Type:
-	<select id="tipType" value="percent">
-		<option value="percent">Percentage</option>
-		<option value="dollar">Dollar Amount</option>
-	</select><br/><br/>
-</div>
-<div class="left">
-	<p>
-		Bill: 
-		<input id="amt" type="text" onkeypress="NumericDecimalOnly(event, this)"
-			   onkeyup="CalcTotal(this)" onfocus="this.select();"/>
-	</p>
-	<p>
-		Tip Percent:
-		<input id="tipPercentage" type="text" onkeypress="NumericDecimalOnly(event, this)"
-			   onkeyup="CalcTotal(this)" onfocus="this.select();"/>
-	</p>
-	<p>
-		Tip Amount:
-		<input id="tipAmt" type="text" disabled="true" onkeypress="NumericDecimalOnly(event, this)"
-		   	   onkeyup="CalcTotal(this)" onfocus="this.select();"/>
-	</p>
-</div>
-
-<div class="left">
-	<p>Total Original: <em id="totOrig"></em></p>
-	<br/>
-	<p>Total Tip Amt: <em id="totTip"></em></p>
-	<p>Total: <em id="total"></em></p>
-</div>
-
-<script src="tipCalc.js" type="text/javascript"></script>
+		<div class="left">
+			<p>Total Original: <em id="totOrig"></em></p>
+			<br/>
+			<p>Total Tip Amt: <em id="totTip"></em></p>
+			<p>Total: <em id="total"></em></p>
+		</div>
+	</body>
+	
+	<script src="tipCalc.js" type="text/javascript"></script>
+</html>
