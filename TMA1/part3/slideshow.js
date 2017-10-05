@@ -16,7 +16,6 @@ var photos = {
 };
 
 var shuffle = false;
-var play = false;
 var shuffledList = new Array();
 
 var slideshow = document.getElementById('slideshow');
@@ -35,7 +34,8 @@ function GetImage()
     };
 	im.src = photos.img[index];
 	var photoIndex = document.getElementById("photoIndex");
-	photoIndex.textContent = "Photo " + (index+1);
+	var photoNum = index + 1;
+	photoIndex.textContent = "Photo " + photoNum;
 
 	var cbxEffect = document.getElementById("effect");
 }
@@ -93,30 +93,29 @@ shuffleBtn.onclick = function()
 }
 
 var playBtn = document.getElementById("playStop");
+var interval;
 playBtn.onclick = function() 
 {
 	if(playBtn.getAttribute("src") == "Icons/play.png")
 	{
 		playBtn.setAttribute("src", "Icons/stop.png");
-		play = true;
-		setTimeout(StartShow, 2000);
+		interval = setInterval(function(){ DisplayImageTimed() }, 2000);
 	}
 	else
 	{
 		playBtn.setAttribute("src", "Icons/play.png");
-		play = false;
+		clearInterval(interval)
+		shuffledList = new new Array();
 	}
 }
 
-function StartShow()
+function DisplayImageTimed()
 {
-	if(!play) return;
 	if(!shuffle)
 		index++
 	else
 		index = GetRandom();
 	GetImage();
-	setTimeout(StartShow, 2000);
 }
 
 function GetRandom()
