@@ -17,8 +17,21 @@
 <body>
 	<div class="initial">
 		<h1 id="title">Welcome to my photos from Vancouver!</h1>
-		<p class="blurb">The following slide show displays my summer living in Vancouver, BC.</p>
+		<p class="blurb">The following slide show displays my summer living in Vancouver, BC.
+			<select id="size" value="Large">
+			  <option value="l">Large</option>
+			  <option value="m">Medium</option>
+			  <option value="s">Small</option>
+			</select>
+		</p>
 	</div>
+	<div class="slideshowBtns">
+		<img id="shuffle" src="Icons/shuffle_off.png" width="50" height="50">
+		<img id="playStop" src="Icons/play.png" width="50" height="50">
+	</div>
+	
+	<p id="photoIndex">Photo 1</p>
+
 	<div class="gallery">
 		<a id="prevArrow">&#10094;</a>
 		<a id="nextArrow">&#10095;</a>
