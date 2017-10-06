@@ -1,30 +1,34 @@
 var quizbtn = document.getElementById('quizbtn');
 var quizDialog = document.getElementsByClassName('dlg')[0];
 var tutorial = document.getElementById('tutorial');
-quizbtn.onclick = function() {
-	quizDialog.style.display = 'block';
-	HideTutorial();
-}
+
+$("button").click(function() {
+	var btnID = this.id;
+	var htmlFile = btnID + ".html";
+
+	DisplayDlg(htmlFile);
+	HideBackground();
+});
 
 var submit = document.getElementById('submit')
 submit.onclick = function() {
 	quizDialog.style.display = 'none';
-	DisplayTutorial();
+	DisplayBackground();
 }
 
 var cancel = document.getElementById('cancel');
 cancel.onclick = function() { 
 	quizDialog.style.display = 'none';
-	DisplayTutorial();
+	DisplayBackground();
 }
 
-function HideTutorial()
+function HideBackground()
 {
 	tutorial.style.display = 'none';
 	document.body.style.backgroundColor = 'gray';
 }
 
-function DisplayTutorial()
+function DisplayBackground()
 {
 	tutorial.style.display = 'block';
 	document.body.style.backgroundColor = 'white';

@@ -4,6 +4,7 @@
 		<title>COMP 466: Assignment 1 Part 4</title>
 		<link rel="stylesheet" type="text/css" href="../main.css">
 		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato:900">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	</head>
 
 	<body>
@@ -22,34 +23,22 @@
 			<p class="blurb">Select one of the following utilities below</p>
 		</div>
 		<div class="navigators">
-			<button id="measure" class="btn" type="submit" value="measure">
+			<button id="measurementConv" class="btn" type="submit" value="measure">
 				<h4>Measurement Converter</h4>
 			</button>
-			<button id="mortgage" class="btn" type="submit" value="mortgage">
+			<button id="mortgageCalculator" class="btn" type="submit" value="mortgage">
 				<h4>Mortgage Calculator</h4>
 			</button>
-			<button id="tip" class="btn" type="submit" value="tip">
+			<button id="tipCalculator" class="btn" type="submit" value="tip">
 				<h4>Tip Calculator</h4>
 			</button>
 		</div>
 
-		<dialog class="dlg">
-			<object class='dlgContent' type="text/html" data="measurementConv.html"></object>
+		<dialog id="dlg">
+			<object id='dlgContent' type="text/html" data="measurementConv.html"></object>
 			<br/>
-			<button id="cancelMeasurement">Close</button>
+			<button id="cancel">Close</button>
 		</dialog>
-		<dialog class="dlg">
-			<object class='dlgContent' type="text/html" data="mortgageCalculator.html"></object>
-			<br/>
-			<button id="cancelMortgage">Close</button>
-		</dialog>
-		<dialog class="dlg">
-			<object class='dlgContent' type="text/html" data="tipCalculator.html"></object>
-			<br/>
-			<button id="cancelTip">Close</button>
-		</dialog>
-		
-		<script src="utilities.js" type="text/javascript"></script>
-		
+		<script src="../dlgController.js" type="text/javascript"></script>
 	</body>
 </html>
