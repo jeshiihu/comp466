@@ -130,6 +130,22 @@ i {
 
 /* MODAL QUIZ /////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 /* https://www.w3schools.com/howto/howto_css_modals.asp */
+#initDlg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: white;
+  width: 100%;
+}
+
+#quizContent {
+  margin-top: 3em;
+}
+
+#save {
+  display: none;
+}
+
 #dlg {
   display: none;
   transform: translate(-50%,-50%);
@@ -160,12 +176,21 @@ i {
   overflow: hidden;
 }
 
-input[type="radio"] {
-  float: left;
-  margin-right: 1em;
+.question, .answer {
+  border: 0 none transparent;
 }
 
+.delete {
+  display: none;
+}
 
+#addQuestion {
+  display: none;
+}
+
+form {
+  margin-bottom: 0.5em;
+}
 /* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 /* slideshow //////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 .gallery {
@@ -217,7 +242,7 @@ input[type="radio"] {
   margin-left: 50%;
 }
 
-input {
+.left input, .right input {
   float: right;
   margin-right: 6em;
 }
