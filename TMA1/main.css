@@ -138,10 +138,6 @@ i {
   width: 100%;
 }
 
-#quizContent {
-  margin-top: 3em;
-}
-
 #save {
   display: none;
 }
@@ -170,10 +166,8 @@ i {
   text-align: center;
 }
 
-#dlgContent {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
+#quizContent {
+  text-align: left;
 }
 
 .question, .answer {

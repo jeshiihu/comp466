@@ -2,10 +2,11 @@
 $(".navigators button").click(function()
 {
 	var btnID = this.id;
-	var htmlFile = btnID + ".html";
+	var xmlFile = btnID + ".xml";
+	GetQuestions(xmlFile);
 
-	var dlgContent = document.getElementById("dlgContent");
-	dlgContent.setAttribute("data", htmlFile);
+	// var dlgContent = document.getElementById("dlgContent");
+	// dlgContent.setAttribute("data", htmlFile);
 
 	if(btnID == "addQuiz")
 	{
@@ -39,7 +40,7 @@ function HideDialog()
 }
 
 function DisplayDlg()
-{
+{	
 	var dlg = document.getElementById("dlg");
 	dlg.style.display = "block";
 
