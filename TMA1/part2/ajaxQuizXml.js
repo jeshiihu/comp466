@@ -29,8 +29,25 @@ function GetQuestions(xmlFile)
 	xmlHttp.send();
 }
 
+function MarkQuestions(xmlFile)
+{ 
+	var xmlHttp = GetXmlHttp();
+	xmlHttp.onreadystatechange = function() 
+	{
+		if (this.readyState == 4 && this.status == 200)
+			CalculateResult(this);
+	};
+
+	xmlHttp.open("GET", xmlFile, true);
+	xmlHttp.send();
+}
+
+
 function DisplayQuestions(xml)
 {
+	var submitButton = document.getElementById("submit");
+	submitButton.disabled = false;
+
 	$('#quizContent').empty();
 	$("#quizTitle").empty();
 	var xmlDoc = xml.responseXML;
@@ -41,29 +58,26 @@ function DisplayQuestions(xml)
 	var questions = xmlDoc.getElementsByTagName("question");
 	for(var i = 0; i < questions.length; i++)
 	{
-		var quesNum = "q" + (i+1);
-		var form = "<form id=\"" + quesNum + "\">";
-		form += "Question " + (i+1) + ": ";
-
+		var form = "<form>";
 		var quesText = GetNodeValue(questions[i], "questionText");
-		form += "<input class=\"question\" value=\"" + quesText + "\">";
-		form += "<button class=\"delete\">Delete</button><br/>"
+		quesText = "Question " + (i+1) + ": " + quesText;
 
-		form += GetAnswer(questions[i], "a");
-		form += GetAnswer(questions[i], "b");
-		form += GetAnswer(questions[i], "c");
-		form += GetAnswer(questions[i], "d");
+		form += "<p>" + quesText + "</p><br/>";
+		form += GetAnswersText(questions[i], "a", i);
+		form += GetAnswersText(questions[i], "b", i);
+		form += GetAnswersText(questions[i], "c", i);
+		form += GetAnswersText(questions[i], "d", i);
 		form += "</form>";
 
 		$(form).appendTo("#quizContent");
 	}
 }
 
-function GetAnswer(question, letter)
+function GetAnswersText(question, letter, index)
 {
 	var answerText = GetNodeValue(question, letter);
-	var input = "<input type=\"radio\" name=\"" + letter + "\" value=\"" + letter + "\">";
-	input += "<input class=\"answer\" type=\"text\" readonly=\"readonly\" value=\"" + answerText + "\"><br/>";
+	var input = "<input type=\"radio\" name=\"" + index + "\" value=\"" + letter + "\">";
+	input += '<p>'+answerText + "</p><br/>";
 	return input;
 }
 
@@ -71,10 +85,72 @@ function GetNodeValue(parent, tag)
 {	try 
 	{
 		return parent.getElementsByTagName(tag)[0].childNodes[0].nodeValue;
-	} catch(e) {
+	} catch(e) 
+	{
 		return "Error Loading Value";
 	}
 }
+
+$('#submit').click(function()
+{
+	var quizFile = (this.value) + ".xml";
+	MarkQuestions(quizFile);
+	this.disabled = true;
+});
+
+function CalculateResult(xml)
+{
+	try
+	{
+		var correct = 0;
+		var xmlDoc = xml.responseXML;
+		var correctAnswers = xmlDoc.getElementsByTagName("answer");
+		for(var i = 0; i < correctAnswers.length; i++)
+		{
+			HighlightCorrectAnswer(i, correctAnswers[i].textContent);
+			var query = 'input[name = "'+ i + '"]:checked';
+			var userAnswer = document.querySelector(query).value;
+			if(userAnswer == correctAnswers[i].textContent)
+				correct++;
+			else
+				HighlightWrongAnswer(i, userAnswer);
+		}
+
+		percentage = correct/correctAnswers.length*100;
+		var scorePara = '<h2>Score: ' + percentage + "%</h2>"; 
+		$('#quizTitle').after(scorePara);
+	}
+	catch(e)
+	{
+		alert("Please fill out the entire quiz before submitting.");
+	}
+}
+
+function HighlightCorrectAnswer(index, ans)
+{
+	HighlightAnswer(index,ans,"green");
+}
+
+function HighlightWrongAnswer(index, ans)
+{
+	HighlightAnswer(index,ans,"red");
+}
+
+function HighlightAnswer(index, ans, hilicolor)
+{
+	var groupedAnswers = document.getElementsByName(index);
+	for(var i = 0; i < groupedAnswers.length; i++)
+	{
+		if(groupedAnswers[i].value == ans)
+		{
+			var answerText = groupedAnswers[i].nextElementSibling;
+			answerText.style.color = hilicolor;
+		}
+
+	}
+}
+
+
 
 
 

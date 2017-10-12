@@ -154,6 +154,14 @@ i {
   text-align: center;
 }
 
+#quizContent p {
+  display: inline;
+}
+
+#quizContent .green {
+  color: green;
+}
+
 #quizContent {
   text-align: left;
 }
