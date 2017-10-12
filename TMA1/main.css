@@ -91,14 +91,6 @@ em {
   text-align: center;
 }
 
-#addQuiz {
-  background-color: lightgray;
-}
-
-#addQuiz:hover {
-  background-color: gray;
-}
-
 .navigators .btn {
   vertical-align: top;
   border: 0;
@@ -138,10 +130,6 @@ i {
   width: 100%;
 }
 
-#save {
-  display: none;
-}
-
 #dlg {
   display: none;
   transform: translate(-50%,-50%);
@@ -168,18 +156,6 @@ i {
 
 #quizContent {
   text-align: left;
-}
-
-.question, .answer {
-  border: 0 none transparent;
-}
-
-.delete {
-  display: none;
-}
-
-#addQuestion {
-  display: none;
 }
 
 form {
