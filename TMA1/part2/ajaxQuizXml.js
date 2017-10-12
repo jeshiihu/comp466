@@ -29,6 +29,19 @@ function GetQuestions(xmlFile)
 	xmlHttp.send();
 }
 
+function AddQuestion(xmlFile)
+{ 
+	var xmlHttp = GetXmlHttp();
+	xmlHttp.onreadystatechange = function() 
+	{
+		if (this.readyState == 4 && this.status == 200)
+			AddXmlQuestion(this);
+	};
+
+	xmlHttp.open("GET", xmlFile, true);
+	xmlHttp.send();
+}
+
 function DisplayQuestions(xml)
 {
 	$('#quizContent').empty();
@@ -68,14 +81,27 @@ function GetAnswer(question, letter)
 }
 
 function GetNodeValue(parent, tag)
-{
-	return parent.getElementsByTagName(tag)[0].childNodes[0].nodeValue;
+{	try 
+	{
+		return parent.getElementsByTagName(tag)[0].childNodes[0].nodeValue;
+	} catch(e) {
+		return "Error Loading Value";
+	}
 }
 
 $("#addQuestion").click(function()
 {
-	
+	var xmlFile = this.getAttribute("value") + ".xml";
+	xmlHttp = AddQuestion(xmlFile);
 });
+
+function AddXmlQuestion(xml)
+{
+	xmlDoc = xml.responseXML;
+	newQuestion = xmlDoc.createElement("question");
+	xmlDoc.getElementsByTagName("question")[0].appendChild(newQuestion);
+	DisplayQuestions(xml);
+}
 
 
 
