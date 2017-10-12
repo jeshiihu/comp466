@@ -162,6 +162,10 @@ i {
   color: green;
 }
 
+#score {
+  display: none;
+}
+
 #quizContent {
   text-align: left;
 }

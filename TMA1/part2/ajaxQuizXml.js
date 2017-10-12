@@ -47,6 +47,8 @@ function DisplayQuestions(xml)
 {
 	var submitButton = document.getElementById("submit");
 	submitButton.disabled = false;
+	var score = document.getElementById("score");
+	score.style.display = 'none';
 
 	$('#quizContent').empty();
 	$("#quizTitle").empty();
@@ -117,8 +119,9 @@ function CalculateResult(xml)
 		}
 
 		percentage = correct/correctAnswers.length*100;
-		var scorePara = '<h2>Score: ' + percentage + "%</h2>"; 
-		$('#quizTitle').after(scorePara);
+		var score = document.getElementById("score");
+		score.textContent = "SCORE: " + percentage + "%"
+		score.style.display = 'inline';
 	}
 	catch(e)
 	{
