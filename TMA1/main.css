@@ -115,9 +115,40 @@ i {
     padding: 3px;
 }
 
-#tutorial p{
+.subSection {
+  margin-left: 2em;
+  margin-right: 2em;
+}
+
+.subSection h2 {
+  margin-top: 1em;
+  margin-bottom: -0.3em;
+}
+
+.subSection hr {
+  margin-bottom: -0.7em;
+}
+
+.images {
+  text-align: center;
+}
+
+.images img {
+  display: inline-block;
+}
+
+#tutorial p { /*dark gray*/
   color: #4C4C4C;
 }
+
+.tutorialSection li { /*light gray*/
+  color: #999999;
+}
+
+.def { /*magenta*/
+  color: #d31f91;
+}
+
 /* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
 /* MODAL QUIZ /////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
