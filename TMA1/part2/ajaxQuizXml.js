@@ -4,13 +4,13 @@
 function GetXmlHttp()
 {
 	var xmlHttp; 
-	if (window.XMLHttpRequest)     // Standard object
+	if (window.ActiveXObject !== undefined)     // Standard object
 	{ 
-	    xmlHttp = new XMLHttpRequest();     // Firefox, Safari, ...
-	} 
-	else if (window.ActiveXObject)   // Internet Explorer 
-	{
 	    xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
+	} 
+	else   // Internet Explorer 
+	{
+	    xmlHttp = new XMLHttpRequest();     // Firefox, Safari, ...
 	}
 
 	return xmlHttp;
@@ -21,11 +21,16 @@ function GetQuestions(xmlFile)
 	var xmlHttp = GetXmlHttp();
 	xmlHttp.onreadystatechange = function() 
 	{
-		if (this.readyState == 4 && this.status == 200)
+		// var script = document.getElementById
+		// this.onload = function()
+		// if (this.readyState == 4 && this.status == 200)
+		// {
 			DisplayQuestions(this);
+		// }
+		// if (this.readyState == 4 && this.status == 200)
 	};
 
-	xmlHttp.open("GET", xmlFile, true);
+	xmlHttp.open("POST", xmlFile, true);
 	xmlHttp.send();
 }
 

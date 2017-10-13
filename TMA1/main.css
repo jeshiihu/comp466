@@ -191,16 +191,13 @@ i {
   display: inline;
 }
 
-#quizContent .green {
-  color: green;
-}
-
 #score {
   display: none;
 }
 
 #quizContent {
   text-align: left;
+  margin: 0.1em;
 }
 
 form {
