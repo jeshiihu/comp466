@@ -2,13 +2,23 @@
 $(".navigators button").click(function()
 {
 	var btnID = this.id;
-	var xmlFile = btnID + ".xml";
-	GetQuestions(xmlFile);
-
-	if(btnID == "addQuiz")
+	var pattern = /quiz/;
+	if(pattern.test(btnID))
 	{
-		var editBtn = document.getElementById("edit");
-		editBtn.style.display = 'none';
+		var xmlFile = btnID + ".xml";
+		GetQuestions(xmlFile);
+
+		if(btnID == "addQuiz")
+		{
+			var editBtn = document.getElementById("edit");
+			editBtn.style.display = 'none';
+		}
+	}
+	else
+	{
+		var htmlFile = btnID + ".html";
+		var obj = document.getElementById("dlgContent");
+		obj.setAttribute("data", htmlFile);
 	}
 
 	DisplayDlg();
