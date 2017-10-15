@@ -102,31 +102,31 @@ $('#submit').click(function()
 
 function CalculateResult(xml)
 {
-	try
+	var correct = 0;
+	var xmlDoc = xml.responseXML;
+	var correctAnswers = xmlDoc.getElementsByTagName("answer");
+	for(var i = 0; i < correctAnswers.length; i++)
 	{
-		var correct = 0;
-		var xmlDoc = xml.responseXML;
-		var correctAnswers = xmlDoc.getElementsByTagName("answer");
-		for(var i = 0; i < correctAnswers.length; i++)
-		{
-			HighlightCorrectAnswer(i, correctAnswers[i].textContent);
+		HighlightCorrectAnswer(i, correctAnswers[i].textContent);
+		try {
 			var query = 'input[name = "'+ i + '"]:checked';
 			var userAnswer = document.querySelector(query).value;
 			if(userAnswer == correctAnswers[i].textContent)
 				correct++;
 			else
 				HighlightWrongAnswer(i, userAnswer);
+		} catch(e) {
+			// statements
+			console.log(e);
 		}
+	}
 
-		percentage = correct/correctAnswers.length*100;
-		var score = document.getElementById("score");
-		score.textContent = "SCORE: " + percentage + "%"
-		score.style.display = 'inline';
-	}
-	catch(e)
-	{
-		alert("Please fill out the entire quiz before submitting.");
-	}
+	percentage = (correct/correctAnswers.length*100).toFixed(2);
+	var score = document.getElementById("score");
+	score.textContent = "SCORE: " + percentage + "%"
+	score.style.display = 'inline';
+	location.href = "#";
+	location.href = "#quizTitle";
 }
 
 function HighlightCorrectAnswer(index, ans)
