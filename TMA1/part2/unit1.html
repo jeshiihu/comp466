@@ -23,6 +23,7 @@
 		<h1 id="subTitle">HTML5 &amp; CSS3</h1>
 		<p class="blurb">For Unit 1, you will be introduced to the main concepts of the web and the basic structure to writing in HTML5 &amp; CSS3. The following information has been sourced from Athabasca University COMP 466 and Internet and World Wide Web How To Program, 5th Edition (Deitel, Harvey, Abbey Deitel).</p>
 		<p class="blurb">Following the completion of this tutorial, a quiz to test your knowledge will be available.</p>
+		<a href="#quizUnit1">Skip To Quiz</a>
 	</div>
 
 	<div id="tutorial">
@@ -56,15 +57,97 @@
 					<img src="img/fig17-1_Deitel_607.png">
 					<img src="img/fig17-2_Deitel_608.png">
 				</div>
+				<p>There are various request types such as GET and POST. GET asks the server to retrieve the the information such as data, images, or files. POST usually will send data to the server where it can either add it to a database or process the information.</p>
+				<p>Typically in a web system, you'll find a multi-tier architecture. This will be comprised of a bottom tier (database layer), middle tier (business controller logic), and lastly the top tier/ client tier (GUI layer).</p>
 			</div>
 		</div>
 		<div class="tutorialSection">
 			<h1 class="title">HTML5</h1>
-			<p>blurb</p>
+			<div class="tutorialSubSection">
+				<h2>HTML5 Basics</h2><hr>
+				<p>After an introduction to what goes on behind the scenes of a webpage, you might be wondering about the HTML that make this all possible. If you have experience with programming languages such as C, C++, C#, and Java, you might think HTML should be a similar enough. Wrong! HTML5 is a markup language that specifies both the structure as well as the content of a web page.</p>
+				<p>The most basic structure of an HTML5 file will be as follows (Deital p.39)</p>
+				<div class="images">
+					<img src="img/fig2-1_Deital_39.png">
+				</div>
+				<p>This is the skeleton that makes up any and all HTML5 files you view in a web browser today. We will quickly break down what the above file is composed of.</p>
+				<ul>
+					<li><a class="def">Line 1:</a> This is the Document type, web browsers require this line in order for it to know what type of file it will be processing (compatibility etc.)</li>
+					<li><a class="def">Lines 2-3:</a> These lines are comments and will be ignored by the browser</li>
+					<li><a class="def">Lines 6-9:</a> This tag element is known as the Head. It contains the information of the HTML5 for the browser to properly know what to do with the file (encodings, title, style CSS, etc.)</li>
+					<li><a class="def">Lines 11-13:</a> This is the Body, where all of a web page's content is written.</li>
+				</ul>
+				<p>To break down the terminology of the structures in an HTML5 file further, the following list will provide a basic syntax:</p>
+				<ul>
+					<li><a class="def">Element:</a> As seen above, the head and body elements are required in every HTML5. An element is usually in the form &lt;tagname&gt;content&lt;/tagname&gt; (paragraphs, list items, headers, etc.). They can also be written without an end tag when no content is required and will be in the form &lt;tagname/&gt;</li>
+					<li><a class="def">Nested Elements:</a> These are known as elements that fall within another element (ie. the title element at line 8)</li>
+					<li><a class="def">Attributes:</a>Within the starting tag of an element, you can specify properties of the element using attributes. These follow the form attributeName="attributeValue". Common attributes include the class (grouping), id (unique identifier), and src (for images and other media).
+					</li>
+				</ul>
+			</div>
+			<div class="tutorialSubSection">
+				<h2>Common Elements</h2><hr>
+				<p>These are a few of the most common elements in HTML5</p>
+				<ul>
+					<li><a class="def">Headings:</a> Have you noticed the various "titles" on this webpage and their varying sizes? Well that is the result of using the heading element, &lt;h1&gt;Title&lt;/h1&gt;<br/>
+					Headings h1 (biggest) - h6 (smallest) are available to use. These act as titles that can help organize and display your web page<br/><h3>Example h3 Title</h3></li>
+					<li><a class="def">Paragraphs:</a> Just as the name suggests this element can create a paragraph of text &lt;p&gt;My paragraph&lt;/p&gt;
+					<p>Example paragraph</p></li>
+					<li><a class="def">Links:</a> You can make most elements act as clickable links using &lt;a href="http://google.ca"&gt;Click me for google&lt;/a&gt;. For example: <a href="http://google.ca">Google!</a></li>
+					<li><a class="def">Images:</a> Images, like the figures you have seen on this webpage, are shown using &lt;img src="pathToMyImg"&gt;. Note these do not need an end tag &lt;/img&gt; or a /&gt;</li>
+					<li><a class="def">Lists:</a> You can make bulleted/unordered lists &lt;ul&gt; or numbered/ordered lists &lt;ol&gt;. Within these you create nested list item elements &lt;li&gt;
+						<ol><li>example</li><li>another example</li></ol></li>
+					<li><a class="def">Table:</a> Tables are a bit more complex than the above elements. The general outline is as follows. You can look into addings headers and footers as they are quite straighforward.<br/>
+						&lt;table&gt;<br/>
+						&lt;tr&gt;Insert a row&lt;/tr&gt;<br/>
+							&lt;th&gt;Column1&lt;/th&gt;<br/>
+							&lt;th&gt;Column2&lt;/th&gt;<br/>
+						&lt;/tr&gt;<br>
+						&lt;/table&gt;<br>
+						<table border="1px solid black">
+							<tr>
+								<th>Banana</th>
+								<th>Yellow</th>
+							</tr>
+							<tr>
+								<th>Apple</th>
+								<th>Red</th>
+							</tr>
+						</table>
+					</li>
+					<li><a class="def">Form:</a> This element helps to collect information from the user. This can also bundle together radio buttons and other elements together which requires user input. &lt;form&gt;Contains a lot of elements&lt;/form&gt;
+					</li>
+					<li><a class="def">Input:</a> As mentioned above these represent radio buttons, check boxes, text boxes, datetime, etc. &lt;input type="radio" name="grouping"&gt; Text<br/>
+						<input type="radio" name="test"> Select Me!<br>
+					</li>
+				</ul>
+			<p>The best way in my opinion to learning what you can do is to google and research! There are so many elements and neat tricks you can do with them in order to make your webpage truely interactive and better. Just remember in order for you to follow good coding rules you can should always validate your HTML5 file. This can be done <a href="https://validator.w3.org/">here</a></p>
+			</div>
 		</div>
 		<div class="tutorialSection">
 			<h1 class="title">CSS3</h1>
-			<p>blurb</p>
+			<div class="tutorialSubSection">
+				<h2>Introduction</h2><hr>
+				<p>Now that we know how to create the contents of a webpage, how do we make it look nicer than plain black and white text with no formatting? This is done using CSS, Cascading Style Sheets.</p>
+				<p>Although you can add formatting to an HTML5 directly with attributes, this can result in messy code. It also makes it difficult to make any uniform change to the same element for example (unnecessary duplicaate formatting). For example, you want all headers to be blue but done want to add that color attribute to every single element in all of your files. CSS takes care of all formatting in a seperate file where you can easily control all of the same elements' styling.</p>
+				<p>In order to link a style sheet to your HTML5 file, you need to add the following line within the head element. 
+				&lt;link rel="stylesheet" type="text/css" href="filePath.css"&gt;. Now you may begin creating your .css file that will help format your web page</p>
+			</div>
+			<div class="tutorialSubSection">
+				<h2>General Guidelines</h2><hr>
+				<p>Similar to how there is so many attributes that you can do, it would be impossible for us to cover everything. However there is a general format that can be followed for the CSS styling. First we typically start with the tagname, class name, or id name in which we wish to stylize.</p>
+				<ul>
+					<li>Tags can simply be written as they are (ie. h2 {})</li>
+					<li>Classes need to being with a '.' (ie. .myClass {})</li>
+					<li>IDs need to begin with '#' (ie. #uniqueTitle {})</li>
+				</ul>
+				<p>You can also add multiple elements by comma seperating them (ie. h1, h2, #firstTitle {}) as well as follow a nested element such as a paragraph within the class "section"<br/>.section p {}</p>
+				<p>Within the curly brackets is where you will add the attributes and their values. These follow the form attributeName: attributeValue;</p>
+			</div>
+			<div class="tutorialSubSection">
+				<h2>Common Attributes</h2><hr>
+				<p></p>
+			</div>
 		</div>
 	</div>
 	

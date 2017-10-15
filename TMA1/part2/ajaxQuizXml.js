@@ -21,16 +21,11 @@ function GetQuestions(xmlFile)
 	var xmlHttp = GetXmlHttp();
 	xmlHttp.onreadystatechange = function() 
 	{
-		// var script = document.getElementById
-		// this.onload = function()
-		// if (this.readyState == 4 && this.status == 200)
-		// {
+		if (this.readyState == 4 && this.status == 200)
 			DisplayQuestions(this);
-		// }
-		// if (this.readyState == 4 && this.status == 200)
 	};
 
-	xmlHttp.open("POST", xmlFile, true);
+	xmlHttp.open("GET", xmlFile, true);
 	xmlHttp.send();
 }
 
