@@ -21,19 +21,87 @@
 	<div class="initial">
 		<h1 id="title">Unit 3: </h1>
 		<h1 id="subTitle">XML &amp; Ajax</h1>
-		<p></p>
+		<p>This unit will teach you the basics of XML and Ajax. These can help organize your documents and data as well as provide ways to request the server for information.</p>
 		<a href="#quizUnit3">Skip To Quiz</a>
 	</div>
 
-	<div class="tutorial">
+	<div id="tutorial">
 		<div class="tutorialSection">
 			<h1 class="title">XML</h1>
-			<p>blurb</p>
+			<p>XML stands for Extensible Markup Language. It has become a standard format for data exchange over the internet. This markup language can describe any type of data that humans can understand and computers to easily process. Below is an example of XML describing a baseball player (Deital p.512)</p>
+			<div class="images">
+				<img src="img/fig15-1_Deital512.png">
+			</div>
+			<p>The structure of XML is similar to HTML5 elements and can even have attributes. The 'tags' in this case are user defined and therefore there are endless possibilities in representing data.</p>
+			<div class="tutorialSubSection">
+				<h2>XML Basics</h2><hr>
+				<p>XML has a few basic structures</p>
+				<ul>
+					<li><a class="def">Data/ Text Content:</a> in the above example, John is considered to be the data of the document</li>
+					<li><a class="def">Element:</a> in the above example, firstName is an element. This will link the element to its contained data. Note that an XML file should always contain one root element (ie. player) and element names should not contain any whitespace</li>
+					<li>It is important to include a root element, match each start tag with an end tag, and to keep casing uniform since XML is case sensitive</li>
+					<li><a class="def">Nested Elements:</a> you can nest elements within each other to create a more detailed and complex XML structure</li>
+					<li>You should declare your XML version similar to how you declare the information for an HTML5 file. To do this you should follow what's written at line 1 of the example above</li>
+					<li><a class="def">Type:</a> you can add a type attribute to your XML elements which can help differentiate between, for example, contact elements where one is of type sender and one is of type receiver.</li>
+					<p align="center">&lt;contact type="sender"&gt;Bob&lt;/contact&gt;</p>
+					<li><a class="def">Namespace:</a> often times there may be elements that you want to be represented with the same name. Even though XML allows this, it can be hard in terms of readability and maintainability. You can use namespaces provide organization</li>
+					<p align="center">&lt;highschool:subject&gt;Science&lt;/highschool:subject&gt;</p>
+					<p align="center">&lt;university:subject&gt;Physics&lt;/university:subject&gt;</p>
+				</ul>
+				<p>You should always ensure your XML is well formed. There are many online resources such as <a href="https://www.w3schools.com/xml/xml_validator.asp">W3Schools</a> to validate your XML.</p>
+				<p>Most XML files can be viewed in a browser without any styling but will usually have a warning at the top to state no style is associated with it. Although you can still view the XML it's not in a nice format that the browser can display. You can add a XSL sheet linked to your XML (similar to the idea of a CSS file to an HTML5 file). <a class="def">XSL</a> stands for Extensible Stylesheet Language and will be explained later.</p>
+			</div>
+			<div class="tutorialSubSection">
+				<h2>DTD</h2><hr>
+				<p><a class="def">DTD:</a> stands for Docuement type definition. It describes the structure of your XML file so that an XML parser can verify if your XML document is valid. This will help when it comes to formatting your XML in a valid and uniform way. XML documents that do not follow the linked DTD document will display an error. Although you have a well structured document, you may not have a valid document. However, DTDs have been considered not flexible enough and do not specify data types. This is where XML schemas come in.</p>
+			</div>
+			<div class="tutorialSubSection">
+				<h2>XML Schema</h2><hr>
+				<p><a class="def">XSD:</a> stands for XML Schema Document. This also describes the elements and content of your XML document with the added information of data types. XSD are more widely used to validate XML Documents.</p>
+			</div>
+			<div class="tutorialSubSection">
+				<h2>XSL: Stylesheet</h2><hr>
+				<p>As mentioned above, XSL files specifies how a browser should render the XML file. This will help us control what elements are headings, paragraphs, or lists! The line below should be added into your XML file to link your .xsl file.</p>
+				<p align="center">&lt;?xml-stylesheet href="resume.xsl" type="text/xsl"?&gt;</p>
+				<p>The following are basic knowledge with XSL:</p>
+				<ul>
+					<li><a class="def">Template:</a> templates are used in XSL files to match and specify what nodes to process. The syntax is as follows:
+						<p>&lt;xsl:template match = "element"&gt;</p>
+						<ul>
+							<li><a class="def">Root Element:</a> match ="/"</li>
+							<li><a class="def">Specific Element:</a> match ="nameOfElement"</li>
+							<li><a class="def">Any Element:</a> match ="*"</li>
+							<li><a class="def">Current Element:</a> match =".", note this should work best within a nested match</li>
+						</ul>
+					</li>
+				</ul>
+				<p>The content of an XSL file is very similar to an HTML5 but its content are the XML values. The following is an example of how you can set up a XSL to stylish your XML documents (Deital p.540).</p>
+				<div class="images">
+					<img src="img/fig15-19_Deital540.png">
+				</div>
+			</div>
 		</div>
 		<div class="tutorialSection">
 			<h1 class="title">AJAX</h1>
-			<p>blurb</p>
+			<p>Ajax stands for Asynchronous Javascript and XML. This makes client side scripting more responsive to your web system. It send aynchronous request to the server and will not be blocked, therefore making your webpages more responsive.</p>
+			<p>Traditionally, a web system has a client side and server side. Ajax is considered to be a middle tier between the the client and server. Ajax can create a XMLHttpRequest to manage a request and retrieve the data from the server. While this request has been sent, the user is able to move on. A good aspect of using Ajax is that it does not require you to reload a page every time a request is sent. It uses a function known as the <a class="def">callback function</a> that uses <a class="def">partial page update</a> which will update the specific element rather than the whole page.</p>
+			<p>The following image (Deital p.574) gives some insight of how Ajax works.</p>
+			<div class="images">
+				<img src="img/fig16-2Deital574.png">
+			</div>
+			<div class="tutorialSubSection">
+				<h2>Common Ajax Knowledge</h2><hr>
+				<p>Ajax is commonly used through XMLHttpRequests, which was mentioned earlier to be request manager objects. I t can detect state changes such as onreadystatechange to ensure that the data requests has been fully sent from the server. The following are some other common XMLHttpRequest methods</p>
+				<ul>
+					<li><a class="def">send():</a> this can sent get, post, etc. to the server and specify the data to retreive</li>
+					<li><a class="def">responseXML:</a> retrieves the xml file from the server</li>
+					<li><a class="def">abort():</a> stops the current request</li>
+					<li><a class="def">status:</a> a status = 200 means a sucessful request was done. 500 means an error has occured</li>
+				</ul>
+			</div>
+			<p>This is just a basic run down of Ajax and as always I reccommend to go online to find more detailed things you can do with Ajax. W3Schools does a good job <a href="https://www.w3schools.com/xml/ajax_intro.asp">here</a>!</p>
 		</div>
+		<h2>This concludes the tutorial on XML and Ajax. Please try out the quiz to test out your knowledge on this unit.</h2>
 	</div>
 	
 	<div class="navigators">

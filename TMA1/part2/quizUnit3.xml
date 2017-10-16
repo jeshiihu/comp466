@@ -3,59 +3,59 @@
 <quiz>
 	<title>Unit 3 Quiz</title>
 	<question>
-		<questionText>What does HTML5 stand for?</questionText>
-		<answer>b</answer>
-		<a>HTTP Text Markup Language</a>
-		<b>Hypertext Markup Language</b>
-		<c>HTTP Text Markup Lookup</c>
-		<d>Hypertext Markup Lookup</d>
-	</question>
-	<question>
-		<questionText>What is true about the Web Server</questionText>
-		<answer>d</answer>
-		<a>It sends requests to retrieve information files</a>
-		<b>It is a physical room of people who receive data and finds it</b>
-		<c>It is not a part of web systems</c>
-		<d>It receives requests for information and data</d>
-	</question>
-	<question>
-		<questionText>What are the three tiers in order from bottom tier to top tier in a Web System?</questionText>
-		<answer>d</answer>
-		<a>Database, GUI Layer, Business layer</a>
-		<b>GUI layer, Businesss Layer, Database</b>
-		<c>Business Layer, Database, GUI Layer</c>
-		<d>None of the above</d>
-	</question>
-	<question>
-		<questionText>CSS stands for?</questionText>
+		<questionText>What does XML stand for?</questionText>
 		<answer>c</answer>
-		<a>Cascading Sheet System</a>
-		<b>Common Sheet Style</b>
-		<c>Cascading Style Sheet</c>
-		<d>Creative Styling Size</d>
+		<a>External Markup Language</a>
+		<b>External Management Lanuage</b>
+		<c>Extensible Markup Language</c>
+		<d>Extensible Management Language</d>
 	</question>
 	<question>
-		<questionText>What does the head element used for?</questionText>
-		<answer>b</answer>
-		<a>The content of the web page (ie. images, text, headings)</a>
-		<b>The title, encoding, and css linking</b>
-		<c>All headings of the document go here</c>
-		<d>Specifies what elements have been used in the document</d>
-	</question>
-	<question>
-		<questionText>Are URIs the same as URLs? Why?</questionText>
-		<answer>c</answer>
-		<a>No, they are synonyms of each other</a>
-		<b>Yes, URIs are a special type of URL</b>
-		<c>Yes, URLs are a special type of URI</c>
-		<d>Yes, URIs are integer based and URLs are long int based</d>
-	</question>
-	<question>
-		<questionText>How can you stylize your HTML5 files?</questionText>
+		<questionText>What types of elements can I use in an XML file?</questionText>
 		<answer>d</answer>
-		<a>From within the HTML5 file</a>
-		<b>In a CSS file</b>
-		<c>None of the above</c>
-		<d>All of the above</d>
+		<a>The same as those in HTML5</a>
+		<b>There is an online database of XML elements to use</b>
+		<c>XML documents do not use elements</c>
+		<d>Any elements can be used since they are user defined</d>
+	</question>
+	<question>
+		<questionText>What is the most common way to validate XML documents?</questionText>
+		<answer>a</answer>
+		<a>XSD</a>
+		<b>XSL</b>
+		<c>DTD</c>
+		<d>DTL</d>
+	</question>
+	<question>
+		<questionText>How does one stylish an XML document?</questionText>
+		<answer>b</answer>
+		<a>Inline the XML sheet</a>
+		<b>With a XSL document</b>
+		<c>With a CSS document</c>
+		<d>With a HTML5 document</d>
+	</question>
+	<question>
+		<questionText>What does AJAX stand for?</questionText>
+		<answer>b</answer>
+		<a>Abstract Javascript and XML</a>
+		<b>Asynchronous Javascript and XML</b>
+		<c>Adaptable Javascript and XML</c>
+		<d>Agile Javascript and XML</d>
+	</question>
+	<question>
+		<questionText>What is a favourable aspect of using Ajax?</questionText>
+		<answer>d</answer>
+		<a>Ajax stylizes your web page with XML and Javascript</a>
+		<b>Ajax reloads your webpage quicker than without it</b>
+		<c>Ajax is not yet prefered or widely accepted</c>
+		<d>Ajax does not relaod a web page after a request</d>
+	</question>
+	<question>
+		<questionText>What status code represents a successful request?</questionText>
+		<answer>c</answer>
+		<a>0</a>
+		<b>100</b>
+		<c>200</c>
+		<d>500</d>
 	</question>
 </quiz>
