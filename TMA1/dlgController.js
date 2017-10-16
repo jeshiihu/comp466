@@ -7,12 +7,6 @@ $(".navigators button").click(function()
 	{
 		var xmlFile = btnID + ".xml";
 		GetQuestions(xmlFile);
-
-		if(btnID == "addQuiz")
-		{
-			var editBtn = document.getElementById("edit");
-			editBtn.style.display = 'none';
-		}
 	}
 	else
 	{
@@ -27,11 +21,6 @@ $(".navigators button").click(function()
 $("#cancel").click(function()
 { 
 	HideDialog();
-});
-
-$("#submit").click(function()
-{ 
-	// HideDialog();
 });
 
 function HideDialog()

@@ -3,59 +3,59 @@
 <quiz>
 	<title>Unit 2 Quiz</title>
 	<question>
-		<questionText>What does HTML5 stand for?</questionText>
+		<questionText>Is Javascript the same as Java?</questionText>
 		<answer>b</answer>
-		<a>HTTP Text Markup Language</a>
-		<b>Hypertext Markup Language</b>
-		<c>HTTP Text Markup Lookup</c>
-		<d>Hypertext Markup Lookup</d>
+		<a>No, one is a compueter language and another is a coffee type</a>
+		<b>No, one is a web scripting language and the other is object orientated</b>
+		<c>Yes, Javascript is special type of Java</c>
+		<d>Yes, Java is a special type of Javascript</d>
 	</question>
 	<question>
-		<questionText>What is true about the Web Server</questionText>
-		<answer>d</answer>
-		<a>It sends requests to retrieve information files</a>
-		<b>It is a physical room of people who receive data and finds it</b>
-		<c>It is not a part of web systems</c>
-		<d>It receives requests for information and data</d>
+		<questionText>What does DOM stand for?</questionText>
+		<answer>a</answer>
+		<a>Document Object Model</a>
+		<b>Data Objective Model</b>
+		<c>Document Ordered Model</c>
+		<d>Data Object Manager</d>
 	</question>
 	<question>
-		<questionText>What are the three tiers in order from bottom tier to top tier in a Web System?</questionText>
-		<answer>d</answer>
-		<a>Database, GUI Layer, Business layer</a>
-		<b>GUI layer, Businesss Layer, Database</b>
-		<c>Business Layer, Database, GUI Layer</c>
-		<d>None of the above</d>
-	</question>
-	<question>
-		<questionText>CSS stands for?</questionText>
-		<answer>c</answer>
-		<a>Cascading Sheet System</a>
-		<b>Common Sheet Style</b>
-		<c>Cascading Style Sheet</c>
-		<d>Creative Styling Size</d>
-	</question>
-	<question>
-		<questionText>What does the head element used for?</questionText>
+		<questionText>What are the purpose of semi colons?</questionText>
 		<answer>b</answer>
-		<a>The content of the web page (ie. images, text, headings)</a>
-		<b>The title, encoding, and css linking</b>
-		<c>All headings of the document go here</c>
-		<d>Specifies what elements have been used in the document</d>
+		<a>They are ignored so you can put them anywhere</a>
+		<b>They are not required but terminate a line</b>
+		<c>They are absolutely required to terminate a line</c>
+		<d>They are special characters and should not be used</d>
 	</question>
 	<question>
-		<questionText>Are URIs the same as URLs? Why?</questionText>
-		<answer>c</answer>
-		<a>No, they are synonyms of each other</a>
-		<b>Yes, URIs are a special type of URL</b>
-		<c>Yes, URLs are a special type of URI</c>
-		<d>Yes, URIs are integer based and URLs are long int based</d>
-	</question>
-	<question>
-		<questionText>How can you stylize your HTML5 files?</questionText>
+		<questionText>What is the result of "y + 5 = " + y + 5, when y = 1?</questionText>
 		<answer>d</answer>
-		<a>From within the HTML5 file</a>
-		<b>In a CSS file</b>
-		<c>None of the above</c>
+		<a>"y + 5 = 6"</a>
+		<b>"y + 5 = y + 5"</b>
+		<c>"y + 5 = y5"</c>
+		<d>"y + 5 = 15"</d>
+	</question>
+	<question>
+		<questionText>How do you get the result "x + 10 = 30", when x = 20?</questionText>
+		<answer>c</answer>
+		<a>("x + 10 = ") + x + 10</a>
+		<b>"x + 10 = " + (x) + 10</b>
+		<c>"x + 10 = " + (x + 10)</c>
+		<d>("x + 10") + (x) + (10)</d>
+	</question>
+	<question>
+		<questionText>How can you trigger an event?</questionText>
+		<answer>a</answer>
+		<a>With JQuery, $("#test").onclick = function() {}</a>
+		<b>With global javascript (ie. OnClick.Button() {});</b>
+		<c>With inline HTML5. Where special elements have the tag as the event trigger (ie. &lt;onclick&gt;)</c>
 		<d>All of the above</d>
+	</question>
+	<question>
+		<questionText>Where is (0, 0) on the HTML5 Canvas element</questionText>
+		<answer>d</answer>
+		<a>Top Right Corner</a>
+		<b>Center of the element</b>
+		<c>Bottom Left</c>
+		<d>Top Left</d>
 	</question>
 </quiz>

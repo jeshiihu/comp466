@@ -20,17 +20,105 @@
 	</div>
 	<div class="initial">
 		<h1 id="title">Unit 2: </h1>
-		<h1 id="subTitle">JavaScript</h1>
-		<p class="blurb">For Unit 1, you will be introduced to the main concepts and basic structure to JavaScript (not to be confused with Java).</p>
+		<h1 id="subTitle">JavaScript &amp; HTML5 Canvas</h1>
+		<p class="blurb">For Unit 2, you will be introduced to the main concepts and basic structure to JavaScript (not to be confused with Java).</p>
 		<p class="blurb">Following the completion of this tutorial, a quiz to test your knowledge will be available.</p>
 		<a href="#quizUnit2">Skip To Quiz</a>
 	</div>
 
-		<div class="tutorial">
+	<div id="tutorial">
 		<div class="tutorialSection">
 			<h1 class="title">JavaScript</h1>
-			<p>blurb</p>
+			<div class="tutorialSubSection">
+				<h2>Introduction</h2><hr>
+				<p>Now that you know the basics of HTML5 and CSS3, you might be wondering how to do things like calculations, event handling, or creating a dynamic web page. This is where Javascript can improve your web pages greatly. This is not the same as Java which is object orientated. Javascript is a scripting language to enhance both the appearance and functionality of web pages.</p>
+				<p>Similar to CSS, you can have inline Javascript code within your HTML5 files or you can choose to have a seperate .js file and simply link it in your HTML5. In order to use Javascript inline you need to create a script element as follows (Deital p.187):</p>
+				<div class="images">
+					<img src="img/fig6-1_Deital_187.png">
+				</div>
+				<p>In that example, a line was simply written to the document/ web page. If you would rather use javascript in a seperate file than you simply need to add this to your HTML5 file.</p>
+				<p align="center">&lt;script src="nameOfFile.js" type="text/javascript"&gt;&lt;/script&gt;</p>
+				<p>This doesn't necessarily need to go into the head of your file. Since your web browser will chronologically process the HTML5 and script in the order it is presented, if you have 'global' function or reference elements that have not yet been processed than the browser will throw an error. It doesn't know that the element you are referencing is below the script element. It may be safe to put your script element below your HTML5 content or try to design a system where this wouldnt be an issue.</p>
+				<p>There are a few basics that we will be covering in this tutorial which will include how to common knowledge with Javascript, call functions, and trigger events</p>
+			</div>
+			<div class="tutorialSubSection">
+				<h2>Common Javascript</h2><hr>
+				<p>There are a few main objects and methods that people just starting out with Javascript should know. Before listing some of them, it should be noted that Javascript behaves similarly to python in that it does not explicitly define an element's/object's type. You do not need to specifiy the parameter type (ie. function(nameOfParam){} rather than function(int name){}) or need to specifying one for a variable. You can simply give the type 'var' for every variable you create (similar to the capabilities of C#).</p>
+				<p>With that in mind, here is a list of some common Javascript knowledge:</p>
+				<ul>
+					<li><a class="def">Document:</a> the 'document' object represents the HTML5 document object. This gives you access to all of the elements found in the file. These are known as the Document Object Model (DOM) which we will later discuss how to get elements and attributes for these objects.</li>
+					<li><a class="def">Methods of DOM:</a> Similar to the concept of a class object, DOM objects have attributes and methods which can be called. For example if we want to write a line to the document, the method 'writeln()' can be called.</li>
+					<p align="center">document.writeln("Hello World!")</p>
+					<li><a class="def">Attributes of DOM:</a> Objects have attributes that can be set or simply just to get the value of an attribute. You can call the method '.setattribute(...)' or to modify/get CSS attributes you can directly set them. For example if you want to hide an element you can do the following</li>
+					<p align="center">myClass.style.display = 'none';</p>
+					<li><a class="def">Semi-colon:</a> The semi colon is not required but it is greatly advised to reduce any bugs that may occur</li>
+					<li><a class="def">Case Sensitive:</a> Javascript is case sensitive so be sure to have the correct casing!</li>
+					<li><a class="def">Quotes</a> You can mix and match single quotes ' with double quotes " and they should work the same in any case. What is useful is when you want to display either single/ double quotes to the user. You should then nest the quotes you wish to show in the opposing quotes.</li>
+					<li><a class="def">Window:</a> the window object can be thought of as the browser window. You can invoke an alert dialog with window.alert("Warning!") or create a function that will be called when the window loads window.onload() = function() {}; We will discuss this syntax later in the tutorial.
+						<ul><li>You can also get user input with a prompt dialog (window.prompt("Please enter a number");)</li></ul>
+					</li>
+					<li><a class="def">Concatinating + Adding:</a> the '+' sign can be used to concatinate strings as well as add numbers. You must be careful with this and not confuse concatinating string with adding numbers. Look at the following as an example, where y = 5.</li>
+					<p align="center">"y + 2 =" + y + 2</p>
+					<p align="center">Expected: "y + 2 = 7"</p>
+					<p align="center">Result: "y + 2 = 52"</p>
+					<li><ul><li>this is the wrong result since we mixed string with integer values. We need to specify exactly that we want to add two integers by grouping them within brackets. This will add (y + 2) as ints then concat them with the "y + 2 =" string.</li></ul></li>
+					<p align="center">"y + 2 =" + (y + 2)</p>
+					<p align="center">Result: "y + 2 = 7"</p>
+					<li><a class="def">Strict Equals/Not Equals:</a> Typically it is good enough to compare two objects/values with a == a or a != b. But in Javascript the following condition would also return true, "72" == 72, even though one is a string and another is an integer. To strictly compare you must use '===' or '!=='</li>
+					<p align="center">"72" === 72 will result in false</p>
+					<li><a class="def">If Condition:</a> you can use if, else if, and else as you would with any other programming language. if(condition){}else if(condition){} else{};</li>
+					<li><a class="def">While Loops:</a> you can loop until a condition is met with while(condition){};</li>
+					<li><a class="def">For Loops:</a>a for loop allows you to iterate through an indexed array or list, for(...);</li>
+					<li><a class="def">Increment, Decrement:</a> For integers, you can easilly increment or decrement them with the following (Deital p.239)</li>
+					<div class="images">
+						<img src="img/fig7-13_Deital_239.png">
+					</div>
+				</ul>
+			</div>
+			<div class="tutorialSubSection">
+				<h2>Functions</h2><hr>
+				<p>You can create functions in Javascript that will help you group together common code with parameters. For example the basic structure is: function AddTwo(input) { return input+2; }</p>
+				<p>You can also use common function such as many Math functions. To list a few:</p>
+				<ul>
+					<li>Math.pow(2,3) is 2 to the power of 3</li>
+					<li>Math.random() returns a random number</li>
+					<li>Math.floor(2.33), Math.ceil(2.99), Math.round(2.5) will round your values</li>
+				</ul>
+				<p>You can retrieve HTML5 elements by their id, class, etc.</p>
+				<ul>
+					<li><a class="def">ID:</a> you can use document.getElementById("idVal") or using jquery $("#idVal")</li>
+					<li><a class="def">Class:</a> you can use document.getElementsByClassName("classVal") or using jquery $(".classVal")</li>
+				</ul>
+				<p>You can also have recursive functions (function that call itself) or iterative functions.</p>
+			</div>
+			<div class="tutorialSubSection">
+				<h2>Event Handling</h2><hr>
+				<p>Buttons, forms, inputs, and various other HTML5 elements can trigger events! Javascript allows you to control what happens when they are triggered. You can either use a inline functions, global elements, or use JQuery to invoke these methods.</p>
+				<p><a class="def">Inline:</a> in your HTML5 element you can set the event method to call a javascript method you have written.</p>
+				<div class="images">
+					<img src="img/inline_event.png">
+				</div>
+				<p><a class="def">Global:</a> you can retrieve the element and then use their event handling method in a global way</p>
+				<div class="images">
+					<img src="img/global_event.png">
+				</div>
+				<p><a class="def">JQuery:</a> if you use JQuery, you can use a shorter form than having to globally retrieve the element first</p>
+				<div class="images">
+					<img src="img/jquery_event.png">
+				</div>
+			</div>
 		</div>
+		<div class="tutorialSection">
+			<h1 class="title">HTML5 Canvas</h1>
+			<p>The canvas element is used to create 2D graphics, animation, images, videos. This is where you can let your creativity shine with more artistic elements.</p>
+			<p>The canvas works with a grid system of (x horizontal, y vertical). top left corner has the grid value of (0,0). Moving right will increase the x value (ie. (50,0) is 50 pixels to the right of the top left corner). Moving down will increase the y coordinate (ie. (50,10) is 50 px right and 10 px down from the left corner).</p>
+			<p>Below is an example of the canvas element (Deital p.446):</p>
+			<div class="images">
+				<img src="img/fig14-2_Deital446.png">
+			</div>
+			<p>There is so much you can do with the canvas element so it would be best to explore <a href="https://www.w3schools.com/html/html5_canvas.asp">here</a>!</p>
+		</div>
+		<h2>This concludes the tutorial on Javascript and HTML5 Canvas. Please try out the quiz to test out your knowledge on this unit.</h2>
 	</div>
 	
 	<div class="navigators">
