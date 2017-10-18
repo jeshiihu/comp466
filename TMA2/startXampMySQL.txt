@@ -1,3 +1,5 @@
 sudo /Applications/XAMPP/xamppfiles/xampp start
 /Applications/XAMPP/xamppfiles/bin/mysql -h localhost -u jess -p
 use mysql;
+
+// this needs to be started to see your webpage

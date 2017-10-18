@@ -1,0 +1,32 @@
+/*Uniform style across all web pages*/
+
+#navBar {
+	box-shadow: 0px 3px 5px darkgray;
+	list-style: none;
+	text-align: center;
+	padding: 20px 0 20px 0;
+	margin-bottom: 1em;
+}
+
+#navBar li {
+	display: inline-block;
+	padding: 0 2em 0 2em;
+}
+
+#active {
+	color: tomato !important;
+	border-bottom: tomato 5px solid;
+}
+
+#navBar li a {
+	font-size: 20px;
+	padding: 0 0 13px 0;
+	text-decoration: none;
+	color: gray;
+}
+
+#navBar li a:hover {
+	text-decoration: none;
+	color: dimgray;
+}
+
