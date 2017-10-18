@@ -1,32 +1,54 @@
 /*Uniform style across all web pages*/
 
-#navBar {
-	box-shadow: 0px 3px 5px darkgray;
-	list-style: none;
+.container {
+	padding-top: 80px;
+	width: 100%;
+	height: 100vh;
 	text-align: center;
-	padding: 20px 0 20px 0;
-	margin-bottom: 1em;
+	background-color: rgba(50, 93, 99, 0.7);
+}
+
+/*//////////////////////////////////////////////////////////////////////////////////
+//NAVIGATION//////////////////////////////////////////////////////////////////////*/
+#navBar {
+	position: fixed;
+	box-shadow: 0px 5px 10px dimgray;
+	list-style: none;
+	padding: 13px 0 20px 0;
+	width:100%;
+	background-color: white;
 }
 
 #navBar li {
 	display: inline-block;
-	padding: 0 2em 0 2em;
 }
 
 #active {
-	color: tomato !important;
-	border-bottom: tomato 5px solid;
+	color: orangered !important;
+	border-bottom: orangered 5px solid;
+}
+
+#active:hover {
+	background-color: whitesmoke;
+	border-bottom: orangered 5px solid;
 }
 
 #navBar li a {
 	font-size: 20px;
-	padding: 0 0 13px 0;
+	padding: 20px 30px 13px 30px;
 	text-decoration: none;
 	color: gray;
 }
 
-#navBar li a:hover {
+#navBar li a:hover:not(#active) {
+	background-color: whitesmoke;
+	border-bottom: whitesmoke 5px solid;
 	text-decoration: none;
 	color: dimgray;
 }
 
+/*//////////////////////////////////////////////////////////////////////////////////
+//HEADERS..///////////////////////////////////////////////////////////////////////*/
+.mainTitle {
+	font-size: 70px;
+}

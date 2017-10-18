@@ -1,0 +1,40 @@
+
+#loginForm {
+	width: 400px;
+	height: 300px;
+	position: fixed; /* or absolute */
+	top: 50%;
+	left: 50%;
+	margin-top: -200px;
+	margin-left: -200px;
+	background-color: rgba(50, 93, 99, 0.7);
+	border-radius: 13px;
+	padding-top: 100px;
+}
+
+img {
+	margin-top: -150px;
+	margin-bottom: 50px;
+	width: 175px;
+	height: 175px;
+}
+
+.inputLogin {
+	width: 250px;
+	height: 30px;
+	padding-left: 10px;
+	border: none;
+	border-radius: 13px;
+}
+
+.btnLogin {
+	padding: 10px 30px;
+	color: white;
+	background-color: orangered;
+	border: none;
+	border-radius: 13px;
+}
+
+form {
+	margin-bottom: 10px;
+}
