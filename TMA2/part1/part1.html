@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700">
 	<link rel="stylesheet" type="text/css" href="../EricMeyerReset.css">
 	<link rel="stylesheet" type="text/css" href="../main.css">
@@ -13,9 +14,30 @@
 		<li><a id="active">Part 1</a></li>
 		<li><a href="../part2/part2.html">Part 2</a></li>
 	</ul>
+
 	<div class="container">
-		<div id="loginForm">
-			<img src="logo.png">
+		<div id="topTenContainer" class="centerContainer">
+			<ul id="loginSignUp">
+				<input id="viewLogin" class="btn" type="submit" name="submit" value="LOGIN">
+				<!-- <li><a href="">SIGN UP</a></li> -->
+			</ul>
+			<div class="heading">
+				<h1>BOOK</h1>
+				<img class="logo" src="logo.png">
+				<h1>MARKER</h1>
+			</div>
+			<div id="topTenList">
+				<h1>Welcome to BookMarker</h1>
+				<h4>Here are our Top Ten Bookmarks</h4>
+				<ol>
+					<li><a href="">HIII</a></li>
+					<li><a href="">TWO</a></li>
+				</ol>
+			</div>
+		</div>
+		<div id="loginContainer" class="centerContainer">
+			<img class="logo" src="logo.png">
+			<h1>BookMarker</h1>
 			<form>
 				<form>
 					<input class="inputLogin" type="text" name="username" placeholder="User Name">
@@ -24,8 +46,10 @@
 					<input class="inputLogin" type="password" name="password" placeholder="Password">
 				</form>
 			</form>
-			<input class="btnLogin" type="submit" name="submit" value="LOGIN">
+			<input class="btn" type="submit" name="submit" value="LOGIN">
 		</div>
 	</div>
+
+	<script type="text/javascript" src="login/loginForm.js"></script>
 </body>
 </html>
