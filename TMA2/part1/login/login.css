@@ -22,28 +22,21 @@
 
 /*//////////////////////////////////////////////////////////////////////////////////
 //CONTAINERS /////////////////////////////////////////////////////////////////////*/
-.centerContainer {
-	border-radius: 13px;
-	background-color: rgba(50, 93, 99, 0.7);
-	position: fixed;
-	top: 50%;
-	left: 50%;
-}
-
 #topTenContainer {
 	width: 80%;
-	height: 80%;
-	margin-top: -20%;
-	margin-left: -40%;
+	height: 83vh;
+	margin-left: 10%;
+	margin-bottom: 20vh;
 }
 
 #loginContainer {
 	display: none;
 	width: 34%;
-	height: 44%;
-	margin-top: -15%;
-	margin-left: -17%;
-	padding-top: 100px;
+	height: 40vh;
+	margin-top: 5%;
+	margin-left: 33%;
+	margin-bottom: 40vh;
+	padding-top: 20vh;
 }
 
 /*//////////////////////////////////////////////////////////////////////////////////
@@ -106,22 +99,14 @@
 	border-radius: 13px;
 }
 
+#altBtn {
+	background-color: darkorange;
+}
+
+#altBtn:hover {
+	background-color: orange;
+}
+
 form {
 	margin-bottom: 10px;
-}
-
-/*//////////////////////////////////////////////////////////////////////////////////
-//BUTTONS ////////////////////////////////////////////////////////////////////////*/
-.btn {
-	font-size: 15px;
-	font-weight: bold;
-	padding: 10px 30px;
-	color: white;
-	background-color: orangered;
-	border: none;
-	border-radius: 13px;
-}
-
-.btn:hover {
-	background-color: #df744a;
 }

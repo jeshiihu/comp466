@@ -1,5 +1,23 @@
+create user 'jess'@'localhost' identified by 'jessSql';
+grant select, insert, update, delete, create, drop, references, execute on *.* to 'jess'@'localhost';
+
+
+
+
 sudo /Applications/XAMPP/xamppfiles/xampp start
 /Applications/XAMPP/xamppfiles/bin/mysql -h localhost -u jess -p
 use mysql;
 
 // this needs to be started to see your webpage
+
+\. student.athabascau.ca/~jessicahu22/public_html/comp466_a2/part1/bookmarkDBSetup.sql
+
+I have also created a MySQL database called "jessicahu22" with
+user name of "jessicahu22" and password of "jessicahu22abyz".
+
+mysql -h localhost -u jessicahu22 -p
+
+use bookmarkDB
+
+Select * from Users;
+select * from Bookmarks;

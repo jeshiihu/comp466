@@ -19,6 +19,7 @@
 		<div id="topTenContainer" class="centerContainer">
 			<ul id="loginSignUp">
 				<input id="viewLogin" class="btn" type="submit" name="submit" value="LOGIN">
+				<input id="viewSignup" class="btn" type="submit" name="submit" value="SIGN UP">
 				<!-- <li><a href="">SIGN UP</a></li> -->
 			</ul>
 			<div class="heading">
@@ -29,10 +30,7 @@
 			<div id="topTenList">
 				<h1>Welcome to BookMarker</h1>
 				<h4>Here are our Top Ten Bookmarks</h4>
-				<ol>
-					<li><a href="">HIII</a></li>
-					<li><a href="">TWO</a></li>
-				</ol>
+				<ol id = "topTen"></ol>
 			</div>
 		</div>
 		<div id="loginContainer" class="centerContainer">
@@ -46,10 +44,12 @@
 					<input class="inputLogin" type="password" name="password" placeholder="Password">
 				</form>
 			</form>
-			<input class="btn" type="submit" name="submit" value="LOGIN">
+			<p id="error"></p>
+			<input id="tryMain" class="btn" type="submit" name="submit" value="LOGIN">
+			<input id="altBtn" class="btn" type="submit" name="altButton" value="SIGN UP">
 		</div>
 	</div>
-
+	<script type="text/javascript" src="part1.js"></script>
 	<script type="text/javascript" src="login/loginForm.js"></script>
 </body>
 </html>

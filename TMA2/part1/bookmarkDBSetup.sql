@@ -1,6 +1,7 @@
-DROP DATABASE IF EXISTS BookmarksDB;
-CREATE DATABASE BookmarksDB;
-USE BookmarksDB;
+-- DROP DATABASE IF EXISTS BookmarksDB;
+-- CREATE DATABASE BookmarksDB;
+-- USE BookmarksDB;
+use jessicahu22;
 
 DROP TABLE IF EXISTS Users;
 CREATE TABLE Users
