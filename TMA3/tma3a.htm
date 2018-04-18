@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700">
+        <link rel="stylesheet" type="text/css" href="EricMeyerReset.css">
+        <link rel="stylesheet" type="text/css" href="main.css">
+
+        <title>COMP 466 Assignment 3</title>
+    </head>
+    <body>
+    <h1 id="title">COMP 466: TMA 3A</h1>
+    <ul id="navBar">
+        <li><a id="active" href="">Home</a></li>
+        <li><a href="part1/CookieCounter.aspx">Part 1</a></li>
+        <li><a href="part2/Slideshow.aspx">Part 2</a></li>
+        <li><a href="part3/CompStore.aspx">Part 3</a></li>
+        <li><a href="part4/CompStore.aspx">Part 4</a></li>
+    </ul>
+    <div id="content" style="text-align: center" width="100%">
+        <!-- https://pixabay.com/en/business-cellphone-codes-coding-1839876/ -->
+        <div id="homepageBanner">
+            <img src="images/business-1839876_1920.png" alt="Banner of Computer Code">
+            <p id="bannerP">
+                <font id="bannerHeader">ADVANCED TECHNOLOGIES FOR WEB-BASED SYSTEMS (REV 6)</font><br>
+                <br>
+                By: Jessica Huynh<br>
+                Date Start: Jan 10th 2017<br>
+                Date Completed: Jan 28th 2017<br>
+                Hours Spent: ~83hrs
+            </p>
+        </div>
+        <br /><br />
+        <h3>Part 1: Cookie Hit Counter</h3>
+        <p>Original Description: Create a web app that keeps track of user's hits to the site, their IP, and current time zone.</p>
+        <p>Interpretation: This part was quite straightforward and implemented the same way.</p>
+        <p>Implementation: I made use of ASP.NET's cookies API and they're API for obtaining IP Addresses. The local time was done on the javascript side.</p>
+        <p>Guide: Click refresh to update the counter. Click Reset to set the counter back to 0</p>
+        <a href="part1/CookieCounter.aspx">Part 1!</a>
+        <br /><br />
+        <h3>Part 2: Slide Show</h3>
+        <p>Original Description: Create a web app that implements a slideshow (of about 20 pictures). Allowing the user to shuffle, play, stop, click next, or prev.</p>
+        <p>Interpretation: This part was easier to implement than the assigment 2 version! The instructions were straightforward and implented as instructed</p>
+        <p>Implementation: I made use the update panel to partially refresh the image from the database. The slideshow automatically starts and uses a timer set to 500ms for each image</p>
+        <p>Guide: Click any button to control the slide show.</p>
+        <a href="part2/Slideshow.aspx">Part 2!</a>
+        <br /><br />
+        <h3>Part 3: Computer Store (First Implementation)</h3>
+        <p>Original Description: Create a web app is similar to a computer store, where a user login, create, configure, and buy both computer parts and entire computers.</p>
+        <p>Interpretation: This version of the store, is hardcoded and does not make use of a database. This is quite difficult with the amount of data being processed and so using cookies was a challenge.
+        In this verion you can add products and computers to your cart, login/create users, and configure a laptop.</p>
+        <p>Implementation: I made use of many cookies and helper classes (Constants.css) to try and manage the data. All images where taken from iconsfinder.com. </p>
+        <p>Guide: Navigate to Products > Computers to see the list of laptops available. You can click and configure them before adding them to your cart.
+            Products > Computer Parts shows you the list of parts which you can add to your cart by clicking on the image button.
+            The contact tab shows a list of contacts. The feedback form will validate your input before submission. The login/create user can be accessed by clicking either the "LOG IN/SIGN UP" or your username.
+        This page will validate your login/ sign up and allow you to log out.</p>
+        <a href="part3/CompStore.aspx">Part 3!</a>
+        <br /><br />
+        <h3>Part 4: Final Computer Store</h3>
+        <p>Original Description: Create a web app that implements database driven computer store (upgrade from Part 3)</p>
+        <p>Interpretation: This was much easier to implement than part 3. The store can recover your password, and smartly display the cart items. It also keeps track of everything using a database
+        This reduces the need for cookies and extra data.</p>
+        <p>Implementation: My database was created as seen in tableSetup.sql. This allowed me to easily access the products, orders, and customers. Most of the same implementation was used other than it coming from a database.
+        That being said, I had to dynamically create controls in the C# serer code based on the queried items. This was a bit difficult but after doing it a few times, it became easier to handle.</p>
+        <p>Guide: Similar to Part 3. New features are the ability to recover your password (accessed on the log in page). THe cart is much nicer and has the ability to update the qty of the items and will update your cart/ database accordingly.</p>
+        <a href="part4/CompStore.aspx">Part 4!</a>
+        <br /><br />
+        <h2>Thank you Dr. Wang for your care and help! It was a pleasure learning from you and learning from the course.</h2>
+    </div>
+    </body>
+</html>

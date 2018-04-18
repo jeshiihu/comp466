@@ -1,0 +1,25 @@
+﻿
+#content {
+    text-align: center;
+}
+
+.aspImg {
+    position: relative;
+    z-index: -1;
+    width: 100%;
+    height: auto;
+}
+
+.caption {
+    font-size: 30px;
+}
+
+.aspImgCtrls {
+    display: inline-block;
+    width: 50px;
+    margin-top: 1%;
+}
+
+.hiddenPhotoId {
+    display: none;
+}

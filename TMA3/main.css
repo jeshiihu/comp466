@@ -1,0 +1,77 @@
+/*Uniform style across all web pages*/
+
+/*//////////////////////////////////////////////////////////////////////////////////
+//NAVIGATION//////////////////////////////////////////////////////////////////////*/
+#navBar {
+    position: fixed;
+    box-shadow: 0px 5px 10px dimgray;
+    list-style: none;
+    padding: 15px 0 18px 30%;
+    width: 100%;
+    background-color: whitesmoke;
+    display: inline-block;
+}
+
+#title {
+    position: fixed;
+    z-index: 1;
+    margin: 1% 0 0 1%;
+    display: inline-block;
+}
+
+#navBar li {
+	display: inline-block;
+}
+
+#active {
+    color: #159CB9 !important;
+    border-bottom: #159CB9 5px solid;
+}
+
+#active:hover {
+    background-color: #D0D3D4;
+}
+
+#navBar li a {
+	font-size: 20px;
+	padding: 20px 30px 11px 30px;
+	text-decoration: none;
+	color: slategray;
+}
+
+#navBar li a:hover:not(#active) {
+    background-color: #D0D3D4;
+    border-bottom: #D0D3D4 5px solid;
+    text-decoration: none;
+    color: dimgray;
+}
+
+#content {
+    /*top right bot left*/
+    position: absolute;
+    margin: 100px 20px 0 20px;
+    top: -1px;
+    left: 0;
+    width: 958px;
+    z-index: -1;
+}
+
+#homepageBanner img {
+    width: 100%;
+    height: auto;
+}
+
+#bannerP {
+    position: absolute;
+    background-color: rgba(10, 37, 43, 0.7);
+    color: whitesmoke;
+    top: 0;
+    padding: 5% 1% 0 1%;
+    width: 98%;
+    height: 365px !important;
+    font-size: 25px;
+}
+
+#bannerHeader {
+    font-size: 35px;
+}

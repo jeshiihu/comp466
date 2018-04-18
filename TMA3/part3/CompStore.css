@@ -1,0 +1,102 @@
+﻿.partLogo {
+    position: fixed;
+    z-index: 2;
+}
+
+.compBanner {
+    width: 100%;
+    height: auto;
+}
+
+.menu {
+    position: fixed;
+    z-index: 0;
+    background-color: #323232;
+    width: 100%;
+    margin-top: 35px;
+    margin-left: -20px;
+    padding: 20px 30px 20px 15%;
+    list-style: none;
+    text-align: center;
+}
+
+.loginSignup {
+    background: none;
+    margin-right: -10px;
+}
+
+.loginSignup:hover {
+    background: none;
+    margin-right: -10px;
+    background: aqua;
+}
+
+.menuitem_text {
+    background-color: #323232;
+    color: white;
+    font-size: 20px;
+    margin-left: 30px;
+}
+
+.menuitem_text:hover {
+    color: #159CB9;
+}
+
+.submenuitem_text {
+    display: block;
+    padding: 10px 10px 10px 10px;
+    background-color: #444444;
+    color: white;
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+.submenuitem_text:hover {
+    background-color: #666666;
+}
+
+.loginSignup {
+    position: fixed;
+    margin-top: 8px;
+    right: 70px;
+}
+
+.shoppingCart {
+    position: fixed;
+    right: 30px;
+}
+
+#computerContent {
+    width: 100%;
+    margin: 150px 50px 0 50px;
+}
+
+.error {
+    color: red;
+}
+
+.products {
+    text-align: center;
+}
+
+.products li{
+    display: inline-block;
+    margin: 5px 5px 15px 5px;
+}
+
+.productItem, .productPartItem {
+    width: 256px;
+    height: 256px;
+}
+
+.productItem:hover, .productPartItem:hover {
+    background-color: #E3E3E3;
+}
+
+tr {
+    height: 30px;
+}
+
+td {
+    width: 100px;
+}
