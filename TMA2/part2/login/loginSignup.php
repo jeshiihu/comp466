@@ -16,6 +16,7 @@
 		$result = mysqli_query($conn, $query);
 		echo mysqli_num_rows($result);
 	}
+
 	if(isset($_GET['loginUser'])) {
 		$user = $_GET['loginUser'];
 		$pw = $_GET['loginPw'];
@@ -24,6 +25,7 @@
 		$result = mysqli_query($conn, $query);
 		echo mysqli_num_rows($result);
 	}
+	
 	if(isset($_POST['signupUser'])) {
 		$user = $_POST['signupUser'];
 		$pw = $_POST['signupPw'];

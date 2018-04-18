@@ -57,7 +57,7 @@ ol {
 	margin-right: 1%;
 }
 
-#part1Logo {
+#part1Logo, #part2Logo {
 	width: 100px;
 	height: 100px;
 }

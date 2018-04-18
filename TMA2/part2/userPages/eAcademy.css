@@ -1,0 +1,53 @@
+
+#eAcademyLogo
+{
+	position: fixed;
+	margin-left: -50%;
+	margin-top: 0;
+	width: 150px;
+	height: 150px;
+}
+
+table
+{
+	width: 90%;
+	margin-top: 1%;
+	margin-left: 5%;
+}
+
+tr, td, th
+{
+	border: 1px solid rgba(131, 160, 160, 1);
+	background-color: white;
+	color: black;
+	table-layout: auto;
+}
+
+.container, .centerContainer
+{
+	height: 400em !important;
+}
+
+#unitSelected
+{
+	text-align: left;
+	margin-top: 6%;
+	margin-left: 1em;
+	margin-right: 1em;
+}
+
+#unitSelected h1, h2
+{
+	color: yellow;
+}
+
+#unitSelected h2
+{
+	margin-top: 1em;
+}
+
+#unitSelected img
+{
+	display: block;
+	margin-left: 25%;
+}

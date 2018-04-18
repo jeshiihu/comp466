@@ -1,9 +1,11 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
 <head>
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700">
+	<script type="" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="" href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700">
 	<link rel="stylesheet" type="text/css" href="../EricMeyerReset.css">
 	<link rel="stylesheet" type="text/css" href="../main.css">
+	<link rel="stylesheet" type="text/css" href="part2.css">
 	<title>Part2</title>
 </head>
 <body>
@@ -12,6 +14,19 @@
 		<li><a href="../part1/part1.html">Part 1</a></li>
 		<li><a id="active">Part 2</a></li>
 	</ul>
-	<h1>Bookmarker Login</h1>
-</body>
+	<div class="container">
+		<div id="welcomeContainer" class="centerContainer">
+			<img class="logo" src="logo.png" alt="">
+			<h1>Welcome to eAcademy</h1>
+			<p>Here you will be able to upload a EML for your courses and interact with other courses available! To begin please log in/ sign up! <!-- either upload your course or select one of the courses below to view. --></p><br/>
+			<input id="tbxUserName" name='username' type="text" placeholder="user name">
+			<input id="tbxPassword" name='password' type="password" placeholder="password"><br/>
+			<p id="error"></p>
+
+			<input id="btnLogin" class="btn" type="submit" name="submit" value="LOGIN">
+			<input id="btnSignUp" class="btn" type="submit" name="submit" value="SIGNUP"><br/>
+		</div>
+	</div>
+	<script type="text/javascript" src="part2.js"></script>
+	<script type="text/javascript" src="login/loginForm.js"></script>
 </html>

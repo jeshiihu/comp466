@@ -23,7 +23,8 @@
 			<ul>
 				<li>Student: Jessica Huynh, 3270104</li>
 				<li>Date Started: Oct 16th, 2017</li>
-				<li>Estimated Hours Spent: 58hr</li>
+				<li>Date Completed: Jan 10th, 2018</li>
+				<li>Estimated Hours Spent: 83hrs</li>
 			</ul>
 		</div>
 		<div id="tma" class="centerContainer">
@@ -36,12 +37,12 @@
 					<h3>Part 1: Bookmarking Service</h3><br/>
 					<div class="left">
 						<a href="part1/part1.html">
-							<img id=part1Logo src="part1/logo.png">
+							<img id=part1Logo src="part1/logo.png" alt="">
 						</a>
 					</div>
 					<div class="right">
 						<p display="inline">For this part of the assignment, we were to create an online bookmarking service to store a list of URLs. It should allow users to be able to add, edit, and delete any websites. While doing so the service will always check if the URL entered is a valid website.</p><br/>
-						<p>Before logging in, you will be shown the Top 10 list of the most popular URLs that other users have added to their lists. You can begin by logging into an existing account or signing up as a new user. Once logged in, you can modify your url lists!</p><br/>
+						<p>Before logging in, you will be shown the Top 10 list (up to 10, less if not enough) of the most popular URLs that other users have added to their lists. You can begin by logging into an existing account or signing up as a new user. Once logged in, you can modify your url lists!</p><br/>
 						<p>This part was done using html, css, javascript/jquery, and php. I first created the various pages and then worked through the homepage followed by the individual user pages. This part accesses the MySQL database that is set up on the server. </p><br>
 						<p>There are two tables:
 						<ol>
@@ -53,13 +54,27 @@
 	
 				</div>
 				<div id="part2Doc">
-					<h3>Part 2: Bookmarking Service</h3><br/>
+					<h3>Part 2: Online Learning Management</h3><br/>
 					<div class="left">
-						<img id=part1Logo href = "part1/part1.html" src="part1/logo.png">
+						<a href="part2/part2.html">
+							<img id=part2Logo src="part2/logo.png" alt="">
+						</a>
 					</div>
 					<div class="right">
-						<p display="inline">For this part of the assignment, we were to create an online bookmarking service to store a list of URLs. It should allow users to be able to add, edit, and delete any websites. While doing so the service will always check if the URL entered is a valid website.</p><br/>
-						<p>Before logging in, you will be shown the Top 10 list of the most popular URLs that other users have added to their lists. You can begin by logging into an existing account or signing up as a new user. Once logged in, you can modify your url lists!</p>	
+						<p display="inline">For this part of the assignment, we were to create EML Learning Service. This is to parse an XML file from a client and uploads the content to MySQL tables. As a user, you may select a unit to view and complete a quiz on!</p><br/>
+						<p>You may log in or sign up. Once logged in you will see the units that can be accessed (3 total). Each Unit is stored in the database and PHP is used to fetch and display all of the data properly. Once done you may compelte a quiz and this will show your result. I had queried and parsed the data using PHP and Javascript/JQuery.</p><br/>
+						<p>There are six tables:
+						<ol>
+							<li>Units: ID (Primary Key), Title, Overview</li>
+							<li>Chapters: ID (Primary Key), Title, Overview, UnitID (Foreign Key)</li>
+							<li>Sections: ID (Primary Key), Title, Content, ChapterID (Foreign Key)</li>
+							<li>Quizzes: ID (Primary Key), Title, UnitID (Foreign Key)</li>
+							<li>QuizQuestion: ID (Primary Key), Question, QuizID (Foreign Key)</li>
+							<li>QuizAnswers: ID (Primary Key), Answer, Correct (flag), QuestionID (Foreign Key)</li>
+						</ol></p><br>
+						<p>This project had many compnent dealing with parsing .xml to the database and database to HTML!</p><br/>
+
+						<h3>Thank you Dr.Wang!</h3>
 					</div>
 				</div>
 			</div>

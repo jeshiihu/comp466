@@ -1,0 +1,46 @@
+
+#welcomeContainer
+{
+	width: 90%;
+	height: 80vh;
+	margin-left: 5%;
+	margin-top: 3vh;
+	margin-bottom: 10vh;
+}
+
+#welcomeContainer p
+{
+	margin-left: 1vh;
+	margin-right: 1vh;
+}
+
+.logo
+{
+	margin-top: -5vh;
+}
+
+.btn
+{
+	margin-top: 1vh;
+}
+
+#user, #logoutBtn
+{
+	display: inline;
+}
+
+#error
+{
+	margin-top: 1%;
+}
+
+input[type='text'], input[type='password']
+{
+	border: none;
+	border-radius: 13px;
+	font-size: 15px;
+	width: 60%;
+	height: 30px;
+	margin-top: 1%;
+	padding-left: 10px;
+}

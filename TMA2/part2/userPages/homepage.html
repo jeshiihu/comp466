@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="" href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700">
+	<link rel="stylesheet" type="text/css" href="../../EricMeyerReset.css">
+	<link rel="stylesheet" type="text/css" href="../../main.css">
+	<link rel="stylesheet" type="text/css" href="../part2.css">
+	<link rel="stylesheet" type="text/css" href="eAcademy.css">
+	<title>HomePage</title>
+</head>
+<body>
+	<ul id="navBar">
+		<li><a href="../../tma2.htm">Home</a></li>
+		<li><a href="../../part1/part1.html">Part 1</a></li>
+		<li><a id="active">Part 2</a></li>
+	</ul>
+	<div class="container">
+		<img id="eAcademyLogo" class="logo" src="../logo.png">
+		<div id="welcomeContainer" class="centerContainer">
+			<div id="logout">
+				<h3 id="user"></h3>
+				<input id="logoutBtn" class="btn" type="submit" name="submit" value="LOG OUT">
+			</div>
+			<div id="selectionAndUpload">
+				<input id="tbxCoursePath" type="text" name="coursePath" placeholder="xml file name">
+				<input id="btnUpload" class="btn" type="submit" name="submit" value="UPLOAD"><br/>
+				<p id="error"/><br/>
+				<h1>Available Courses</h1>
+				<p>Please select a unit to begin!</p>
+				<table id="tblCourses" summary="Available Courses">
+					<tr>
+						<th>Course ID</th>
+						<th>Course Name</th>
+					</tr>
+				</table>
+				<input id="btnStartUnit" class="btn" type="submit" name="submit" value="START UNIT >"><br/>
+			</div>
+			<input id="btnBackToSelection" class="btn" type="submit" name="submit" value="BACK"><br/>
+			<div id="unitSelected">
+			</div>
+			<input id="btnMark" class="btn" type="submit" name="submit" value="MARK QUIZ"><br/>
+		</div>
+	</div>
+	<script type="text/javascript" src="../part2.js"></script>
+	<script type="text/javascript" src="databaseToGuiParser.js"></script>
+	<script type="text/javascript" src="homepage.js"></script>
+</body>
+</html>
